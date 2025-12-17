@@ -79,7 +79,7 @@ export default function AboutSection() {
         {/* RIGHT SIDE – CONTENT (AOS ENABLED) */}
         <div>
           {/* ABOUT LABEL */}
-          <div data-aos="fade-up" className="flex items-center gap-3 mb-5">
+          <div data-aos="fade-up" className="flex items-center gap-3">
             <span className="w-8 h-1 bg-orange-500"></span>
             <p className="text-sm uppercase tracking-widest font-semibold text-gray-700">
               About Us
