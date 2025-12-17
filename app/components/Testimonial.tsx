@@ -178,7 +178,7 @@ export default function Testimonial() {
           </div>
         </div>
       </div>
-      <ClientsSection />
+      {/* <ClientsSection /> */}
     </section>
   );
 }
