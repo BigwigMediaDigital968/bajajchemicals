@@ -4,6 +4,7 @@ import Image from "next/image";
 import AboutSection from "./components/About";
 import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
+import ButtonFill from "./components/ButtonFill";
 
 export default function HomePage() {
   return (
@@ -42,12 +43,11 @@ export default function HomePage() {
               incidunt!
             </p>
 
-            <a
+            <ButtonFill
+              text="Explore Products"
               href="/products"
-              className="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-orange-600 text-black px-6 py-3 rounded-full font-semibold transition"
-            >
-              Explore Our Products →
-            </a>
+              className="w-[170px]"
+            />
           </div>
         </div>
       </section>

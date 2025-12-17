@@ -5,6 +5,7 @@ import imgLarge from "../assets/about-img-2.jpg";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ButtonFill from "./ButtonFill";
 
 export default function AboutSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -140,12 +141,7 @@ export default function AboutSection() {
 
           {/* BUTTON */}
           <div data-aos="fade-up" data-aos-delay="400">
-            <a
-              href="#"
-              className="inline-flex items-center gap-3 border-2 border-orange-500 text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-orange-500 hover:text-white transition"
-            >
-              Learn More →
-            </a>
+            <ButtonFill text="Learn More →" href="/" className="w-[170px]" />
           </div>
         </div>
       </div>

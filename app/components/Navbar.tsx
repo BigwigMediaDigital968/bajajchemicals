@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import logo from "../assets/logo.png";
+import ButtonFill from "./ButtonFill";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -91,12 +92,11 @@ export default function Navbar() {
               <span>+01 123456789</span>
             </div>
 
-            <Link
+            <ButtonFill
+              text="Get in Touch"
               href="/contact"
-              className="bg-[var(--primary)] hover:bg-orange-600 text-black px-5 py-2 rounded-full font-semibold transition"
-            >
-              Get in Touch
-            </Link>
+              className="w-[170px]"
+            />
           </div>
 
           {/* MOBILE TOGGLE */}
@@ -135,13 +135,11 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <Link
-            href="/contact"
-            onClick={() => setOpen(false)}
-            className="mt-6 bg-[var(--primary)] text-black px-8 py-3 rounded-full font-semibold animate-fadeInUp"
-          >
-            Get in Touch
-          </Link>
+          <ButtonFill
+            text="Get in Touch"
+            href="/products"
+            className="w-[170px]"
+          />
         </div>
       </div>
     </>

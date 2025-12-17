@@ -79,3 +79,106 @@
   left: 130%;
   transition: left 0.8s ease-in-out;
 }
+
+/* =======================
+   3D FLIP BUTTON
+======================= */
+
+.btn-3d {
+  position: relative;
+  width: 160px;
+  height: 52px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(900px) rotateX(0deg);
+  transition: transform 1s ease;
+}
+
+.btn-3d:hover {
+  transform: perspective(900px) rotateX(360deg);
+}
+
+.btn-3d span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: var(--med-primary);
+  background: #ffffff;
+
+  border: 2px solid var(--med-primary);
+  border-radius: 999px;
+
+  backface-visibility: hidden;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Hover color */
+.btn-3d:hover span {
+  background: var(--med-primary);
+  color: #ffffff;
+}
+
+/* 4 Faces */
+.btn-3d span:nth-child(1) {
+  transform: rotateX(0deg) translateZ(26px);
+}
+.btn-3d span:nth-child(2) {
+  transform: rotateX(90deg) translateZ(26px);
+}
+.btn-3d span:nth-child(3) {
+  transform: rotateX(180deg) translateZ(26px);
+}
+.btn-3d span:nth-child(4) {
+  transform: rotateX(270deg) translateZ(26px);
+}
+
+/* Base Button */
+.click-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 120px;
+  padding: 0 18px;
+  height: 44px;
+
+  border: 1px solid;
+  border-radius: 5px;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap; /* 🔑 prevent breaking */
+
+  color: #979695;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+  box-sizing: border-box;
+}
+
+/* STYLE 5 */
+.btn-style5 {
+  border-color: #979695;
+  color: #979695;
+  box-shadow: 0.3em 0.3em 0 #f97316;
+}
+
+.btn-style5:hover {
+  box-shadow: -0.3em -0.3em 0 #979695;
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
