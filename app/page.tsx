@@ -3,6 +3,7 @@ import hero from "./assets/hero.png";
 import Image from "next/image";
 import AboutSection from "./components/About";
 import Footer from "./components/Footer";
+import Testimonial from "./components/Testimonial";
 
 export default function HomePage() {
   return (
@@ -51,6 +52,7 @@ export default function HomePage() {
         </div>
       </section>
       <AboutSection />
+      <Testimonial />
       <Footer />
     </>
   );
