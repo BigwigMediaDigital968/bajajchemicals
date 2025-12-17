@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import hero from "./assets/hero.png";
 import Image from "next/image";
 import AboutSection from "./components/About";
+import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
@@ -50,6 +51,7 @@ export default function HomePage() {
         </div>
       </section>
       <AboutSection />
+      <Footer />
     </>
   );
 }
