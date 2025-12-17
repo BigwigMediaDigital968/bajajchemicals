@@ -37,7 +37,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-12 bg-white relative overflow-hidden">
+    <section ref={ref} className="pt-12 bg-white relative overflow-hidden">
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5 items-center">
         {/* LEFT SIDE – IMAGE COMPOSITION */}
         <div className="relative w-full max-w-lg">
@@ -80,9 +80,12 @@ export default function AboutSection() {
         {/* RIGHT SIDE – CONTENT (AOS ENABLED) */}
         <div>
           {/* ABOUT LABEL */}
-          <div data-aos="fade-up" className="flex items-center gap-3">
-            <span className="w-8 h-1 bg-orange-500"></span>
-            <p className="text-sm uppercase tracking-widest font-semibold text-gray-700">
+          <div
+            data-aos="fade-up"
+            className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
+          >
+            <span className="w-2 h-2 rounded-full bg-orange-400" />
+            <p className="text-sm uppercase tracking-widest font-semibold ">
               About Us
             </p>
           </div>

@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import testimonialImg from "../assets/testimonial-image.jpg";
+import testimonialbg from "../assets/testimonial-bg.png";
 
 const testimonials = [
   {
@@ -33,93 +35,140 @@ const testimonials = [
 ];
 
 export default function Testimonial() {
-  const [index, setIndex] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const [show, setShow] = useState(false);
+  const [[index, direction], setIndex] = useState<[number, number]>([0, 0]);
   const testimonial = testimonials[index];
 
-  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
-  const prev = () =>
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+  const paginate = (dir: number) => {
+    setIndex([(index + dir + testimonials.length) % testimonials.length, dir]);
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShow(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section className="py-20 bg-white">
-      <div className="w-11/12 md:w-5/6 mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT IMAGE (CONSTANT) */}
-          <div className="overflow-hidden rounded-3xl">
+    <section ref={ref} className="relative py-12 text-white overflow-hidden">
+      {/* BACKGROUND IMAGE */}
+      <div className="absolute inset-0">
+        <Image
+          src={testimonialbg}
+          alt="Background"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black/10" />
+      </div>
+
+      <div className="relative w-11/12 md:w-5/6 mx-auto">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
+          {/* LEFT IMAGE */}
+          <div className="overflow-hidden rounded-3xl glass-hover curtain-wrapper">
             <Image
               src={testimonialImg}
               alt="Client experience"
-              width={700}
-              height={900}
               className="w-full h-full object-cover"
               priority
             />
           </div>
 
-          {/* RIGHT CONTENT (CHANGES) */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-gray-500">
-              <span className="w-2 h-2 rounded-full bg-orange-400" />
-              Our Client Say
+          {/* RIGHT CONTENT */}
+          <div>
+            {/* FIXED TITLE (NO ANIMATION) */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3">
+                <span className="w-2 h-2 rounded-full bg-orange-400" />
+                <p className="text-sm uppercase tracking-widest font-semibold ">
+                  Our Clients Say
+                </p>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6">
+                What our satisfied clients <br />
+                <span className="font-bold">are saying</span>
+              </h2>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              What our satisfied clients <br />
-              <span className="font-bold">are saying</span>
-            </h2>
+            {/* SLIDING CONTENT */}
+            <div className="relative overflow-hidden min-h-[260px]">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={index}
+                  initial={{ x: direction > 0 ? 80 : -80, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: direction > 0 ? -80 : 80, opacity: 0 }}
+                  transition={{ duration: 0.45, ease: "easeOut" }}
+                >
+                  {/* Stars */}
+                  <div className="flex gap-1 text-orange-400 text-lg mb-4">
+                    {Array.from({ length: testimonial.rating }).map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
 
-            {/* Stars */}
-            <div className="flex gap-1 text-orange-400 text-lg">
-              {Array.from({ length: testimonial.rating }).map((_, i) => (
-                <span key={i}>★</span>
-              ))}
-            </div>
-
-            {/* Review */}
-            <p className="text-gray-600 leading-relaxed max-w-xl">
-              “{testimonial.review}”
-            </p>
-
-            {/* CLIENT + NAVIGATION ROW */}
-            <div className="flex items-center justify-between pt-6">
-              {/* LEFT: Client Info */}
-              <div className="flex items-center gap-4">
-                <Image
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  width={56}
-                  height={56}
-                  className="rounded-full object-cover"
-                />
-
-                <div>
-                  <p className="font-semibold text-gray-900">
-                    {testimonial.name}
+                  {/* Review */}
+                  <p className="text-gray-700 leading-relaxed max-w-xl mb-8">
+                    “{testimonial.review}”
                   </p>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
-                </div>
 
-                {/* Orange Dot (optional, like screenshot) */}
-                <span className="w-2 h-2 rounded-full bg-orange-400 ml-3" />
-              </div>
+                  {/* CLIENT ROW */}
+                  {/* CLIENT ROW */}
+                  <div className="flex items-center justify-between max-w-xl">
+                    {/* LEFT: Avatar + Name */}
+                    <div className="flex items-center gap-4">
+                      <Image
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        width={56}
+                        height={56}
+                        className="rounded-full"
+                      />
 
-              {/* RIGHT: Navigation Buttons */}
-              <div className="flex gap-3">
-                <button
-                  onClick={prev}
-                  className="w-12 h-12 rounded-xl bg-orange-400 text-white flex items-center justify-center hover:bg-orange-500 transition"
-                >
-                  <ChevronLeft />
-                </button>
+                      <div>
+                        <p className="font-semibold text-gray-900">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm text-gray-800">
+                          {testimonial.role}
+                        </p>
+                      </div>
+                    </div>
 
-                <button
-                  onClick={next}
-                  className="w-12 h-12 rounded-xl bg-orange-400 text-white flex items-center justify-center hover:bg-orange-500 transition"
-                >
-                  <ChevronRight />
-                </button>
-              </div>
+                    {/* RIGHT: Navigation Buttons */}
+                    <div className="flex gap-4">
+                      <button
+                        onClick={() => paginate(-1)}
+                        className="w-12 h-12 rounded-xl bg-orange-400 hover:bg-orange-500 transition flex items-center justify-center"
+                      >
+                        <ChevronLeft />
+                      </button>
+
+                      <button
+                        onClick={() => paginate(1)}
+                        className="w-12 h-12 rounded-xl bg-orange-400 hover:bg-orange-500 transition flex items-center justify-center"
+                      >
+                        <ChevronRight />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
             </div>
+
+            {/* NAVIGATION */}
           </div>
         </div>
       </div>

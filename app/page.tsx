@@ -5,6 +5,7 @@ import AboutSection from "./components/About";
 import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
 import ButtonFill from "./components/ButtonFill";
+import ProductsSection from "./components/Products";
 
 export default function HomePage() {
   return (
@@ -52,6 +53,7 @@ export default function HomePage() {
         </div>
       </section>
       <AboutSection />
+      <ProductsSection />
       <Testimonial />
       <Footer />
     </>
