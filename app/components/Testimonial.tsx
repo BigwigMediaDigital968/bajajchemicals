@@ -95,14 +95,20 @@ export default function Testimonial() {
           <div>
             {/* FIXED TITLE (NO ANIMATION) */}
             <div className="mb-8">
-              <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3">
+              <div
+                data-aos="fade-up"
+                className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
+              >
                 <span className="w-2 h-2 rounded-full bg-orange-400" />
                 <p className="text-sm uppercase tracking-widest font-semibold ">
                   Our Clients Say
                 </p>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6">
+              <h2
+                data-aos="zoom-in"
+                className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
+              >
                 What our satisfied clients <br />
                 <span className="font-bold">are saying</span>
               </h2>

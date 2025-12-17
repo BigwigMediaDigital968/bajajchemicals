@@ -95,8 +95,8 @@ export default function AboutSection() {
             data-aos="zoom-in"
             className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
           >
-            Building quality through <br />
-            <span className="font-bold">industrial innovation</span>
+            Lorem, ipsum dolor. <br />
+            <span className="font-bold">Lorem, ipsum.</span>
           </h2>
 
           {/* DESCRIPTION */}

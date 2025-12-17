@@ -15,23 +15,30 @@ export default function LatestBlogSection() {
         <div className="grid md:grid-cols-2 gap-10 mb-8 items-start">
           {/* LEFT */}
           <div>
-            <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] ">
+            <div
+              data-aos="fade-up"
+              className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] "
+            >
               <span className="w-2 h-2 rounded-full bg-[var(--primary)]" />
               <p className="text-sm uppercase tracking-widest font-semibold">
                 Latest Blog
               </p>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6">
+            <h2
+              data-aos="zoom-in"
+              className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
+            >
               Insights from our <br />
               <span className="font-bold">latest blogs</span>
             </h2>
           </div>
 
           {/* RIGHT */}
-          <p className="text-gray-500 max-w-md md:pt-10">
-            Stay updated with the latest trends, innovations, and expert
-            insights in the manufacturing and industrial sectors.
+          <p data-aos="fade-up" className="text-gray-500 max-w-md md:pt-10">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+            optio veritatis, molestias at nulla sint perspiciatis odio eaque sed
+            velit?
           </p>
         </div>
 

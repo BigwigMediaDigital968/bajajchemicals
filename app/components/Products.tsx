@@ -50,7 +50,7 @@ export default function ProductsSection() {
           data-aos="zoom-in"
           className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
         >
-          High-quality chemical & detergent solutions
+          Lorem ipsum dolor sit amet consectetur.
         </h2>
 
         {/* TABS */}
