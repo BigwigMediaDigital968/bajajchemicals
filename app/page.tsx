@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
 import ButtonFill from "./components/ButtonFill";
 import ProductsSection from "./components/Products";
+import LatestBlogSection from "./components/Blogs";
 
 export default function HomePage() {
   return (
@@ -55,6 +56,7 @@ export default function HomePage() {
       <AboutSection />
       <ProductsSection />
       <Testimonial />
+      <LatestBlogSection />
       <Footer />
     </>
   );

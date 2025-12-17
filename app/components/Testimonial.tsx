@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import testimonialImg from "../assets/testimonial-image.jpg";
 import testimonialbg from "../assets/testimonial-bg.png";
+import ClientsSection from "./Clients";
 
 const testimonials = [
   {
@@ -82,6 +83,11 @@ export default function Testimonial() {
               alt="Client experience"
               className="w-full h-full object-cover"
               priority
+            />
+            <span
+              className={`curtain-overlay ${
+                show ? "curtain-animate curtain-delay" : ""
+              }`}
             />
           </div>
 
@@ -172,6 +178,7 @@ export default function Testimonial() {
           </div>
         </div>
       </div>
+      <ClientsSection />
     </section>
   );
 }
