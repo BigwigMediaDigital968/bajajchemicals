@@ -31,7 +31,7 @@ const services = [
 export default function WhatWeDoSection() {
   return (
     <section className="bg-[#181818] text-white">
-      <div className="grid lg:grid-cols-2 min-h-[90vh]">
+      <div className="grid lg:grid-cols-2 lg:min-h-[90vh]">
         {/* LEFT CONTENT */}
         <div className="w-11/12 md:w-5/6 mx-auto py-20 flex flex-col justify-center">
           {/* LABEL */}

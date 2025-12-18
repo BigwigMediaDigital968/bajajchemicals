@@ -313,7 +313,7 @@ export default function AboutPage() {
           </div>
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             {/* LEFT IMAGE */}
-            <div className="overflow-hidden rounded-3xl glass-hover curtain-wrapper">
+            <div className="hidden lg:block overflow-hidden rounded-3xl glass-hover curtain-wrapper">
               <Image
                 src={faqimg}
                 alt="Client experience"

@@ -11,6 +11,7 @@ import LatestBlogSection from "./components/Blogs";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WhatWeDoSection from "./components/WhatWeDo";
 
 export default function HomePage() {
   useEffect(() => {
@@ -78,7 +79,9 @@ export default function HomePage() {
         </div>
       </section>
       <AboutSection />
+      <WhatWeDoSection />
       <ProductsSection />
+
       <Testimonial />
       <LatestBlogSection />
       <Footer />
