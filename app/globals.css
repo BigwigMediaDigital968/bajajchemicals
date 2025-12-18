@@ -182,3 +182,95 @@
   border-color: #f97316;
   color: #ffffff;
 }
+
+/* ===== WRAPPER ===== */
+.orbital-wrapper {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 60px;
+  height: 60px;
+  z-index: 9999;
+}
+
+/* ===== MAIN ORB ===== */
+.main-orb {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: radial-gradient(circle, #ff9f1c, #ff6a00);
+  box-shadow: 0 0 20px rgba(255, 106, 0, 0.55),
+    inset 0 0 12px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  position: relative;
+}
+
+.orb-core {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===== CHILD BUTTONS ===== */
+.orb-btn {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.2);
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+}
+
+/* ===== POSITIONS (CARDINAL) ===== */
+.orb-btn.up {
+  bottom: 72px;
+  right: 0px;
+  color: #ff595e;
+}
+
+.orb-btn.right {
+  right: 72px;
+  bottom: -10px;
+  color: #4fc3f7;
+}
+
+.orb-btn.down {
+  bottom: 80%;
+  right: 60px;
+  color: #25d366;
+}
+
+/* ===== OPEN STATE ===== */
+.orbital-wrapper.open .orb-btn {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+/* ===== HOVER ===== */
+.orb-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 16px currentColor;
+}
+
+.main-orb:hover {
+  transform: scale(1.05);
+}
+
+.main-orb svg {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
