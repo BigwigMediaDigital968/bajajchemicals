@@ -11,7 +11,6 @@ import LatestBlogSection from "./components/Blogs";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import FloatingActions from "./components/FloatingActions";
 
 export default function HomePage() {
   useEffect(() => {
@@ -82,7 +81,6 @@ export default function HomePage() {
       <ProductsSection />
       <Testimonial />
       <LatestBlogSection />
-      <FloatingActions />
       <Footer />
     </>
   );
