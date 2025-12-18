@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Factory, ShieldCheck, Settings, Package } from "lucide-react";
 
-import industryImg from "../assets/what-we-do-image.jpg"; // replace with your image
+import industryImg from "../assets/whatwedo.png"; // replace with your image
 
 const services = [
   {
