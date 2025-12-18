@@ -58,13 +58,13 @@ export default function Navbar() {
               {productOpen && (
                 <div className="absolute top-20 left-0 bg-black/90 w-48 shadow-xl overflow-hidden">
                   <Link
-                    href="/products/chemicals"
+                    href="/chemicals"
                     className="block px-5 py-3 hover:bg-orange-500/10"
                   >
                     Chemicals
                   </Link>
                   <Link
-                    href="/products/detergents"
+                    href="/detergents"
                     className="block px-5 py-3 hover:bg-orange-500/10"
                   >
                     Detergents
@@ -119,8 +119,8 @@ export default function Navbar() {
           {[
             { name: "Home", link: "/" },
             { name: "About", link: "/about-us" },
-            { name: "Chemicals", link: "/products/chemicals" },
-            { name: "Detergents", link: "/products/detergents" },
+            { name: "Chemicals", link: "/chemicals" },
+            { name: "Detergents", link: "/detergents" },
             { name: "Blogs", link: "/blogs" },
             { name: "Contact", link: "/contact" },
           ].map((item, i) => (

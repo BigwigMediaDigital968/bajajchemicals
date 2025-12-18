@@ -75,7 +75,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-[var(--primary)]">
+                <Link href="/about-us" className="hover:text-[var(--primary)]">
                   About Us
                 </Link>
               </li>
@@ -85,16 +85,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/products/chemicals"
-                  className="hover:text-[var(--primary)]"
-                >
+                <Link href="/chemicals" className="hover:text-[var(--primary)]">
                   Chemicals
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/products/detergents"
+                  href="/detergents"
                   className="hover:text-[var(--primary)]"
                 >
                   Detergents
