@@ -40,7 +40,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-[var(--primary)]">
+              <Link href="/about-us" className="hover:text-[var(--primary)]">
                 About
               </Link>
             </li>
@@ -118,7 +118,7 @@ export default function Navbar() {
         <div className="h-full flex flex-col justify-center items-center text-white text-2xl font-medium gap-8">
           {[
             { name: "Home", link: "/" },
-            { name: "About", link: "/about" },
+            { name: "About", link: "/about-us" },
             { name: "Chemicals", link: "/products/chemicals" },
             { name: "Detergents", link: "/products/detergents" },
             { name: "Blogs", link: "/blogs" },
