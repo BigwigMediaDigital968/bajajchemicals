@@ -10,7 +10,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Eye, Target, Gem } from "lucide-react";
 import bg from "../assets/mission-image.jpg";
-import testimonialImg from "../assets/testimonial-image.jpg";
+import bg1 from "../assets/hero.png";
+import faqimg from "../assets/whatwedo.png";
 import WhatWeDoSection from "../components/WhatWeDo";
 type Tab = "mission" | "vision" | "value";
 
@@ -277,7 +278,7 @@ export default function AboutPage() {
                 className="rounded-3xl overflow-hidden glass-hover"
               >
                 <Image
-                  src={bg}
+                  src={bg1}
                   alt="Industrial Work"
                   className="w-full h-full object-cover"
                 />
@@ -287,7 +288,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* <WhatWeDoSection /> */}
+      <WhatWeDoSection />
 
       <section ref={ref} className="relative py-12 text-white overflow-hidden">
         <div className="relative w-11/12 md:w-5/6 mx-auto">
@@ -314,7 +315,7 @@ export default function AboutPage() {
             {/* LEFT IMAGE */}
             <div className="overflow-hidden rounded-3xl glass-hover curtain-wrapper">
               <Image
-                src={testimonialImg}
+                src={faqimg}
                 alt="Client experience"
                 className="w-full h-full object-cover"
                 priority

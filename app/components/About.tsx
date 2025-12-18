@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import imgSmall from "../assets/about-img-1.jpg";
-import imgLarge from "../assets/about-img-2.jpg";
+import imgLarge from "../assets/whatwedo.png";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
