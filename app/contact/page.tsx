@@ -74,28 +74,31 @@ const Contact = () => {
             {/* CONTACT INFO */}
             <div className="space-y-16">
               {/* Phone */}
-              <a href="tel:+1809120670" className="block">
-                <div className="flex gap-4 items-start group cursor-pointer w-fit">
+              <div className="flex gap-4 items-start w-fit">
+                <a
+                  href="tel:+1809120670"
+                  className="flex gap-4 items-start group cursor-pointer"
+                >
                   {/* ICON BOX */}
                   <div
                     className="
-          relative w-14 h-14 rounded-xl
-          bg-[var(--primary)]
-          flex items-center justify-center
-          text-white
-          overflow-hidden
-        "
+        relative w-14 h-14 rounded-xl
+        bg-[var(--primary)]
+        flex items-center justify-center
+        text-white
+        overflow-hidden
+      "
                   >
                     {/* Black hover spread */}
                     <span
                       className="
-            absolute inset-0
-            bg-black
-            scale-0
-            transition-transform duration-500 ease-out
-            group-hover:scale-100
-            rounded-xl
-          "
+          absolute inset-0
+          bg-black
+          scale-0
+          transition-transform duration-500 ease-out
+          group-hover:scale-100
+          rounded-xl
+        "
                     />
 
                     {/* Icon */}
@@ -114,37 +117,43 @@ const Contact = () => {
                       +1 809 120 670
                     </p>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
 
               {/* Email */}
-              <a href="mailto:info@domainname.com" className="block">
-                <div className="flex gap-4 items-start group cursor-pointer w-fit">
+              <div className="flex gap-4 items-start w-fit">
+                <a
+                  href="mailto:info@domainname.com"
+                  className="flex gap-4 items-start group cursor-pointer"
+                >
+                  {/* ICON BOX */}
                   <div
                     className="
-          relative w-14 h-14 rounded-xl
-          bg-[var(--primary)]
-          flex items-center justify-center
-          text-white
-          overflow-hidden
-        "
+        relative w-14 h-14 rounded-xl
+        bg-[var(--primary)]
+        flex items-center justify-center
+        text-white
+        overflow-hidden
+      "
                   >
                     <span
                       className="
-            absolute inset-0
-            bg-black
-            scale-0
-            transition-transform duration-500 ease-out
-            group-hover:scale-100
-            rounded-xl
-          "
+          absolute inset-0
+          bg-black
+          scale-0
+          transition-transform duration-500 ease-out
+          group-hover:scale-100
+          rounded-xl
+        "
                     />
+
                     <Mail
                       size={22}
                       className="relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 
+                  {/* TEXT */}
                   <div>
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       E-mail
@@ -153,42 +162,45 @@ const Contact = () => {
                       info@domainname.com
                     </p>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
 
               {/* Address */}
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=37+San+Juan+Lane+Graaf+Florisstraat+22A+3021+CH"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                <div className="flex gap-4 items-start group cursor-pointer w-fit">
+              <div className="flex gap-4 items-start w-fit">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=37+San+Juan+Lane+Graaf+Florisstraat+22A+3021+CH"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-4 items-start group cursor-pointer"
+                >
+                  {/* ICON BOX */}
                   <div
                     className="
-          relative w-14 h-14 rounded-xl
-          bg-[var(--primary)]
-          flex items-center justify-center
-          text-white
-          overflow-hidden
-        "
+        relative w-14 h-14 rounded-xl
+        bg-[var(--primary)]
+        flex items-center justify-center
+        text-white
+        overflow-hidden
+      "
                   >
                     <span
                       className="
-            absolute inset-0
-            bg-black
-            scale-0
-            transition-transform duration-500 ease-out
-            group-hover:scale-100
-            rounded-xl
-          "
+          absolute inset-0
+          bg-black
+          scale-0
+          transition-transform duration-500 ease-out
+          group-hover:scale-100
+          rounded-xl
+        "
                     />
+
                     <MapPin
                       size={22}
                       className="relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 
+                  {/* TEXT */}
                   <div>
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       Our Address
@@ -197,8 +209,8 @@ const Contact = () => {
                       37 San Juan Lane Graaf Florisstraat 22A, 3021 CH
                     </p>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
 
