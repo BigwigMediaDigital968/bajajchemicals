@@ -4,6 +4,18 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import hero from "../assets/aboutus.jpg";
 import Footer from "../components/Footer";
+import ProductsGrid from "../components/ProductGrid";
+import ProductSidebar from "../components/ProductSidebar";
+
+import det1 from "../assets/hero.png";
+import det2 from "../assets/hero.png";
+import det3 from "../assets/hero.png";
+
+const detergentProducts = [
+  { title: "Laundry Detergents", image: det1 },
+  { title: "Industrial Cleaners", image: det2 },
+  { title: "Surface Care Solutions", image: det3 },
+];
 
 export default function DetergentPage() {
   return (
@@ -57,6 +69,20 @@ export default function DetergentPage() {
           </div>
         </div>
       </section>
+
+      {/* <section className="py-16">
+        <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row gap-12">
+          <ProductSidebar />
+
+          <div className="flex-1">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-8">
+              Detergents
+            </h2>
+
+            <ProductsGrid products={detergentProducts} />
+          </div>
+        </div>
+      </section> */}
       <Footer />
     </div>
   );
