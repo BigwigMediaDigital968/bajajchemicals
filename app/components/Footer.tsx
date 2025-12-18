@@ -70,19 +70,35 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-gray-400">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" className="hover:text-[var(--primary)]">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/about">About Us</Link>
+                <Link href="/about" className="hover:text-[var(--primary)]">
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/blog">Blog</Link>
+                <Link href="/blog" className="hover:text-[var(--primary)]">
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link href="/products/chemicals">Chemicals</Link>
+                <Link
+                  href="/products/chemicals"
+                  className="hover:text-[var(--primary)]"
+                >
+                  Chemicals
+                </Link>
               </li>
               <li>
-                <Link href="/products/detergents">Detergents</Link>
+                <Link
+                  href="/products/detergents"
+                  className="hover:text-[var(--primary)]"
+                >
+                  Detergents
+                </Link>
               </li>
             </ul>
           </div>
@@ -92,16 +108,24 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Security</h4>
             <ul className="space-y-4 text-gray-400">
               <li>
-                <Link href="/terms">Term & Condition</Link>
+                <Link href="/terms" className="hover:text-[var(--primary)]">
+                  Term & Condition
+                </Link>
               </li>
               <li>
-                <Link href="/privacy">Privacy Policy</Link>
+                <Link href="/privacy" className="hover:text-[var(--primary)]">
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <Link href="/help">Help</Link>
+                <Link href="/help" className="hover:text-[var(--primary)]">
+                  Help
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact" className="hover:text-[var(--primary)]">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

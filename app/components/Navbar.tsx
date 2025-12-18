@@ -74,7 +74,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/blogs" className="hover:text-[var(--primary)]">
+              <Link href="/blog" className="hover:text-[var(--primary)]">
                 Blogs
               </Link>
             </li>
