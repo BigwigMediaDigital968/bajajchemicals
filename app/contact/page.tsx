@@ -15,7 +15,7 @@ const Contact = () => {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] w-full overflow-hidden">
+      <section className="relative h-[70vh] lg:h-[80vh] w-full overflow-hidden">
         {/* Background Image */}
         <Image
           src={contactbg} // 🔁 replace with your image path
@@ -29,18 +29,35 @@ const Contact = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         {/* Content */}
-        <div className="relative z-10 h-full flex items-center">
-          <div className="w-11/12 md:w-5/6 mx-auto">
-            <h1 className="text-white text-4xl md:text-6xl font-light mb-4">
-              Contact <span className="font-semibold">us</span>
+        <div className="absolute bottom-12 left-0 right-0 z-10">
+          <div className="w-11/12 md:w-5/6 mx-auto text-left text-white">
+            {/* Big Heading */}
+            <h1
+              className="text-4xl md:text-6xl font-bold tracking-wide mb-4"
+              data-aos="fade-up"
+            >
+              Contact Us
             </h1>
 
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-white/80">
-              <Link href="/">Home</Link>
-              <span className="text-[var(--primary)]">•</span>
-              <span className="text-[var(--primary)] font-medium">
-                Contact Us
+            <div
+              className="flex items-center gap-3 text-sm md:text-base"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <a
+                href="/"
+                className="text-white hover:text-[var(--color5)] transition"
+              >
+                Home
+              </a>
+
+              {/* Circle */}
+              <span className="w-2 h-2 rounded-full bg-[var(--primary)]"></span>
+
+              {/* Current Page */}
+              <span className="text-[var(--primary)] font-semibold">
+                Contact us
               </span>
             </div>
           </div>

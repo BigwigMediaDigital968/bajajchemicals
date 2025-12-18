@@ -11,6 +11,7 @@ import "aos/dist/aos.css";
 import { Eye, Target, Gem } from "lucide-react";
 import bg from "../assets/mission-image.jpg";
 import testimonialImg from "../assets/testimonial-image.jpg";
+import WhatWeDoSection from "../components/WhatWeDo";
 type Tab = "mission" | "vision" | "value";
 
 const faqs = [
@@ -116,6 +117,177 @@ export default function AboutPage() {
         </div>
       </section>
       <AboutSection />
+
+      <section className="relative py-12">
+        {/* PARALLAX BACKGROUND */}
+        <div className="relative h-[75vh] overflow-hidden">
+          <div
+            className="absolute inset-0 bg-fixed bg-center bg-cover"
+            style={{ backgroundImage: `url(${bg.src})` }}
+          />
+          <div className="absolute inset-0 bg-black/60" />
+
+          {/* TEXT ON IMAGE */}
+          <div className="relative z-10 h-full flex items-center">
+            <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-2 gap-12 text-white">
+              <div>
+                <div
+                  data-aos="fade-up"
+                  className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
+                >
+                  <span className="w-2 h-2 rounded-full bg-orange-400" />
+                  <p className="text-sm uppercase tracking-widest font-semibold ">
+                    Our Approach
+                  </p>
+                </div>
+
+                <h2
+                  data-aos="zoom-in"
+                  className="text-4xl md:text-5xl font-light text-gray-200 leading-tight mb-6"
+                >
+                  Lorem, ipsum dolor. <br />
+                  <span className="font-bold">Lorem, ipsum.</span>
+                </h2>
+              </div>
+
+              <p
+                data-aos="fade-up"
+                data-aos-delay="200"
+                className="text-gray-200 max-w-lg"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                iusto asperiores dignissimos. Quasi obcaecati illo qui fugit
+                dolor odio expedita.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* FLOATING CONTENT BOX */}
+        <div className="relative -mt-32 z-20">
+          <div
+            data-aos="fade-up"
+            className="w-11/12 md:w-5/6 mx-auto bg-white rounded-[36px] shadow-2xl overflow-hidden"
+          >
+            {/* TABS */}
+            <div data-aos="fade-down" className="grid grid-cols-3 border-b">
+              <TabButton
+                active={active === "mission"}
+                onClick={() => setActive("mission")}
+                icon={<Eye />}
+                label="Our Mission"
+              />
+              <TabButton
+                active={active === "vision"}
+                onClick={() => setActive("vision")}
+                icon={<Target />}
+                label="Our Vision"
+              />
+              <TabButton
+                active={active === "value"}
+                onClick={() => setActive("value")}
+                icon={<Gem />}
+                label="Our Value"
+              />
+            </div>
+
+            {/* CONTENT */}
+            <div className="p-10 md:p-14 grid lg:grid-cols-2 gap-12 items-center">
+              {/* TEXT */}
+              <div>
+                {active === "mission" && (
+                  <div key={active} data-aos="fade-right">
+                    <p className="text-gray-600 mb-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Molestiae quisquam impedit beatae vel consectetur eius,
+                      suscipit veniam nihil.
+                    </p>
+                    <ul className="space-y-4">
+                      {[
+                        "Sustainable Manufacturing Practices",
+                        "Advanced Technology Integration",
+                        "Community & Environmental Responsibility",
+                        "Innovation-Driven Growth",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">
+                            ✓
+                          </span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {active === "vision" && (
+                  <div key={active} data-aos="fade-right">
+                    <p className="text-gray-600 mb-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Molestiae quisquam impedit beatae vel consectetur eius,
+                      suscipit veniam nihil.
+                    </p>
+                    <ul className="space-y-4">
+                      {[
+                        "Sustainable Manufacturing Practices",
+                        "Advanced Technology Integration",
+                        "Community & Environmental Responsibility",
+                        "Innovation-Driven Growth",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">
+                            ✓
+                          </span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {active === "value" && (
+                  <div key={active} data-aos="fade-right">
+                    <p className="text-gray-600 mb-6">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Molestiae quisquam impedit beatae vel consectetur eius,
+                      suscipit veniam nihil.
+                    </p>
+                    <ul className="space-y-4">
+                      {[
+                        "Sustainable Manufacturing Practices",
+                        "Advanced Technology Integration",
+                        "Community & Environmental Responsibility",
+                        "Innovation-Driven Growth",
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-center gap-3">
+                          <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">
+                            ✓
+                          </span>
+                          <span className="text-gray-700">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* IMAGE */}
+              <div
+                data-aos="zoom-in"
+                className="rounded-3xl overflow-hidden glass-hover"
+              >
+                <Image
+                  src={bg}
+                  alt="Industrial Work"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* <WhatWeDoSection /> */}
 
       <section ref={ref} className="relative py-12 text-white overflow-hidden">
         <div className="relative w-11/12 md:w-5/6 mx-auto">
@@ -241,8 +413,8 @@ function TabButton({
       onClick={onClick}
       className={`flex items-center justify-center gap-3 py-6 text-sm font-semibold transition ${
         active
-          ? "bg-[var(--primary)] text-black"
-          : "bg-white text-gray-700 hover:bg-gray-50"
+          ? "bg-[var(--primary)] text-white"
+          : "bg-white text-gray-700 hover:bg-gray-100"
       }`}
     >
       {icon}
