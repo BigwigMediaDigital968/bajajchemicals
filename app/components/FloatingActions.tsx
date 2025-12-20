@@ -24,13 +24,13 @@ export default function FloatingActions() {
       </button>
 
       {/* RIGHT – CALL */}
-      <a href="tel:+911234567890" className="orb-btn right" aria-label="Call">
+      <a href="tel:+919810333152" className="orb-btn right" aria-label="Call">
         <Phone size={18} />
       </a>
 
       {/* UP – EMAIL */}
       <a
-        href="mailto:info@domain.com"
+        href="mailto:Bajajchemicals@hotmail.com"
         className="orb-btn up"
         aria-label="Email"
       >
@@ -39,7 +39,7 @@ export default function FloatingActions() {
 
       {/* DOWN – WHATSAPP */}
       <a
-        href="https://wa.me/911234567890"
+        href="https://wa.me/9810038988"
         target="_blank"
         rel="noopener noreferrer"
         className="orb-btn down"

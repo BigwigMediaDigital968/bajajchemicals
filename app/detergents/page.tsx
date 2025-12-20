@@ -4,20 +4,31 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import hero from "../assets/aboutus.jpg";
 import Footer from "../components/Footer";
-import ProductsGrid from "../components/ProductGrid";
-import ProductSidebar from "../components/ProductSidebar";
-
-import det1 from "../assets/hero.png";
-import det2 from "../assets/hero.png";
-import det3 from "../assets/hero.png";
-
-const detergentProducts = [
-  { title: "Laundry Detergents", image: det1 },
-  { title: "Industrial Cleaners", image: det2 },
-  { title: "Surface Care Solutions", image: det3 },
-];
+import DetergentProductGrid from "../components/DetergentProductGrid";
+import { detergentProducts } from "../data/detergentProduct";
+import { useState } from "react";
 
 export default function DetergentPage() {
+  const [search, setSearch] = useState("");
+  const [selectedProducts, setSelectedProducts] = useState<string[]>([]);
+
+  const toggleProduct = (name: string) => {
+    setSelectedProducts((prev) =>
+      prev.includes(name) ? prev.filter((p) => p !== name) : [...prev, name]
+    );
+  };
+
+  const filteredProducts = detergentProducts.filter((product) => {
+    const matchesSearch = product.productName
+      .toLowerCase()
+      .includes(search.toLowerCase());
+
+    const matchesToggle =
+      selectedProducts.length === 0 ||
+      selectedProducts.includes(product.productName);
+
+    return matchesSearch && matchesToggle;
+  });
   return (
     <div>
       <Navbar />
@@ -70,19 +81,43 @@ export default function DetergentPage() {
         </div>
       </section>
 
-      {/* <section className="py-16">
-        <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row gap-12">
-          <ProductSidebar />
+      <section className="py-16">
+        <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row gap-10">
+          {/* LEFT FILTER */}
+          <aside className="w-full lg:w-1/4 lg:sticky lg:top-28 h-fit">
+            <input
+              type="text"
+              placeholder="Search detergent..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full mb-6 rounded-full border px-4 py-3"
+            />
 
+            <div className="bg-white border rounded-xl p-4 space-y-3">
+              {detergentProducts.map((p) => (
+                <label
+                  key={p.productName}
+                  className="flex gap-3 items-center text-sm cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedProducts.includes(p.productName)}
+                    onChange={() => toggleProduct(p.productName)}
+                    className="text-[#f97316]"
+                  />
+                  {p.productName}
+                </label>
+              ))}
+            </div>
+          </aside>
+
+          {/* PRODUCTS */}
           <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-              Detergents
-            </h2>
-
-            <ProductsGrid products={detergentProducts} />
+            <DetergentProductGrid products={filteredProducts} />
           </div>
         </div>
-      </section> */}
+      </section>
+
       <Footer />
     </div>
   );
