@@ -20,9 +20,7 @@ export default function ChemicalProductGrid({
         <div
           key={index}
           className="
-  group relative rounded-2xl p-[1px] bg-gradient-to-br from-[#f97316]/30 via-orange-400/30 to-amber-400/30 hover:from-[#f97316]
-hover:to-[#f97316] transition-all duration-300
-"
+                group relative rounded-2xl p-[1px] bg-gradient-to-br from-[#f97316]/30 via-orange-400/30 to-amber-400/30 hover:from-[#f97316] hover:to-[#f97316] transition-all duration-300"
         >
           {/* CARD */}
           <div className="relative h-full rounded-2xl bg-white backdrop-blur-xl p-6 shadow-md hover:shadow-2xl transition-all duration-300">
@@ -58,16 +56,16 @@ hover:to-[#f97316] transition-all duration-300
               </button> */}
               <span
                 className="
-  mt-auto inline-flex items-center justify-center
-  rounded-full
-  border border-[#f97316]
-  px-5 py-2
-  text-sm font-semibold
-  text-[#f97316]
-  hover:bg-[#f97316]
-  hover:text-white
-  transition-all duration-300
-"
+                        mt-auto inline-flex items-center justify-center
+                        rounded-full
+                        border border-[#f97316]
+                        px-5 py-2
+                        text-sm font-semibold
+                        text-[#f97316]
+                        hover:bg-[#f97316]
+                        hover:text-white
+                        transition-all duration-300
+                        "
               >
                 {product.quantity}
               </span>
