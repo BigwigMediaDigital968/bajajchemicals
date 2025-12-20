@@ -4,19 +4,16 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import hero from "../assets/aboutus.jpg";
 import Footer from "../components/Footer";
-import ProductSidebar from "../components/ProductSidebar";
-import ProductsGrid from "../components/ProductGrid";
-import chem1 from "../assets/hero.png";
-import chem2 from "../assets/hero.png";
-import chem3 from "../assets/hero.png";
-
-const chemicalProducts = [
-  { title: "Industrial Solvents", image: chem1 },
-  { title: "Specialty Chemicals", image: chem2 },
-  { title: "Water Treatment Chemicals", image: chem3 },
-];
+import { useState } from "react";
+import ChemicalProductGrid from "../components/ChemicalProductGrid";
+import { chemicalProducts } from "../data/chemicalProducts";
 
 export default function ChemicalPage() {
+  const [search, setSearch] = useState("");
+
+  const filteredProducts = chemicalProducts.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div>
       <Navbar />
@@ -69,19 +66,67 @@ export default function ChemicalPage() {
         </div>
       </section>
 
-      {/* <section className="py-16">
-        <div className="w-11/12 md:w-5/6 mx-auto flex flex-col lg:flex-row gap-12">
-          <ProductSidebar />
+      {/* PRODUCTS */}
+      <section className="py-16">
+        <div className="w-11/12 md:w-5/6 mx-auto">
+          <div className="relative w-full md:w-1/2 mb-10">
+            {/* Search Icon */}
+            <svg
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+              width="18"
+              height="18"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
 
-          <div className="flex-1">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-8">
-              Chemicals
-            </h2>
+            {/* Input */}
+            <input
+              type="text"
+              placeholder="Search chemicals by name or company..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="
+      w-full
+      rounded-full
+      border border-gray-200
+      bg-white/80
+      backdrop-blur-lg
+      py-3
+      pl-11
+      pr-10
+      text-sm
+      text-gray-800
+      shadow-md
+      transition-all
+      duration-300
+      focus:border-blue-500
+      focus:ring-4
+      focus:ring-blue-500/20
+      outline-none
+    "
+            />
 
-            <ProductsGrid products={chemicalProducts} />
+            {/* Clear Button */}
+            {search && (
+              <button
+                onClick={() => setSearch("")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-700 transition"
+                aria-label="Clear search"
+              >
+                ✕
+              </button>
+            )}
           </div>
+
+          <ChemicalProductGrid products={filteredProducts} />
         </div>
-      </section> */}
+      </section>
+
       <Footer />
     </div>
   );
