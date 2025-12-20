@@ -87,7 +87,7 @@ export default function ChemicalPage() {
             {/* Input */}
             <input
               type="text"
-              placeholder="Search chemicals by name or company..."
+              placeholder="Search chemicals by name"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="
