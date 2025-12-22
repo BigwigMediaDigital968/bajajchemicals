@@ -125,7 +125,11 @@ export default function AboutSection() {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-delay="400" className="mt-10">
-            <ButtonFill text="Learn More →" href="/" className="w-[170px]" />
+            <ButtonFill
+              text="Contact us →"
+              href="/contact"
+              className="w-[170px]"
+            />
           </div>
         </div>
       </div>
