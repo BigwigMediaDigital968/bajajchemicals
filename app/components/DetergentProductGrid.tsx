@@ -26,7 +26,6 @@ export default function DetergentProductGrid({
           key={product.productName}
           className="rounded-2xl border bg-white p-6 shadow-sm"
         >
-          {/* HEADER */}
           <div className="flex items-center gap-4 mb-6">
             <Image
               src={product.image}
@@ -39,8 +38,6 @@ export default function DetergentProductGrid({
               {product.productName}
             </h2>
           </div>
-
-          {/* VARIANTS */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {product.variants.map((v, i) => (
               <div

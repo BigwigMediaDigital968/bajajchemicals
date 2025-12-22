@@ -1,12 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaPinterestP,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../assets/logo2.png";
 import footerbg from "../assets/footer.svg";
@@ -23,18 +18,12 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="relative text-white overflow-hidden">
-      {/* BACKGROUND IMAGE */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${footerbg.src})` }}
       />
-
-      {/* DARK OVERLAY */}
       <div className="absolute inset-0 bg-black/70" />
-
-      {/* CONTENT WRAPPER */}
       <div className="relative z-10">
-        {/* TOP CTA */}
         <div className="w-11/12 md:w-5/6 mx-auto py-12">
           <h2 className="text-3xl md:text-4xl font-light mb-4">
             Ready to work with us?
@@ -44,13 +33,8 @@ export default function Footer() {
             driven by quality, experience, and trust.
           </p>
         </div>
-
-        {/* DIVIDER */}
         <div className="border-t border-white/10"></div>
-
-        {/* MAIN FOOTER CONTENT */}
         <div className="w-11/12 md:w-5/6 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* BRAND */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
@@ -79,8 +63,6 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* QUICK LINKS */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-4 text-gray-400">
@@ -109,8 +91,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* SECURITY */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Security</h4>
             <ul className="space-y-4 text-gray-400">
@@ -131,8 +111,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          {/* CONTACT */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400 leading-relaxed">
@@ -150,8 +128,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* BOTTOM BAR */}
         <div className="border-t border-white/10">
           <p className="text-center text-gray-500 py-6 text-sm">
             © 2026 Bajaj Chemicals. All Rights Reserved.

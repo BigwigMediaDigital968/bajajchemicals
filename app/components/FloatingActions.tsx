@@ -9,7 +9,6 @@ export default function FloatingActions() {
 
   return (
     <div className={`orbital-wrapper ${open ? "open" : ""}`}>
-      {/* MAIN ORB (CONTACT ICON) */}
       <button
         onClick={() => setOpen(!open)}
         className="main-orb flex items-center justify-center"
@@ -22,13 +21,9 @@ export default function FloatingActions() {
           }`}
         />
       </button>
-
-      {/* RIGHT – CALL */}
       <a href="tel:+919810333152" className="orb-btn right" aria-label="Call">
         <Phone size={18} />
       </a>
-
-      {/* UP – EMAIL */}
       <a
         href="mailto:Bajajchemicals@hotmail.com"
         className="orb-btn up"
@@ -36,8 +31,6 @@ export default function FloatingActions() {
       >
         <Mail size={18} />
       </a>
-
-      {/* DOWN – WHATSAPP */}
       <a
         href="https://wa.me/9810038988"
         target="_blank"

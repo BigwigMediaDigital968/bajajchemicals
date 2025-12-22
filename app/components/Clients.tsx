@@ -34,7 +34,6 @@ export default function ClientsSection() {
   return (
     <section className="pt-12 overflow-hidden">
       <div className="w-11/12 md:w-5/6 mx-auto overflow-hidden">
-        {/* LOGO SLIDER */}
         <Swiper
           modules={[Autoplay]}
           autoplay={{

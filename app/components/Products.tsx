@@ -39,7 +39,6 @@ export default function ProductsSection() {
   return (
     <section className="py-12 bg-white">
       <div className="w-11/12 md:w-5/6 mx-auto">
-        {/* HEADER */}
         <div
           data-aos="fade-up"
           className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
@@ -49,8 +48,6 @@ export default function ProductsSection() {
             Our Products
           </p>
         </div>
-
-        {/* TITLE */}
         <AnimatePresence mode="wait">
           <motion.h2
             key={activeTab}
@@ -63,8 +60,6 @@ export default function ProductsSection() {
             {sectionTitles[activeTab]}
           </motion.h2>
         </AnimatePresence>
-
-        {/* TABS */}
         <div className="flex  gap-4 mb-10">
           <button
             onClick={() => setActiveTab("chemicals")}
@@ -88,25 +83,18 @@ export default function ProductsSection() {
             Detergents
           </button>
         </div>
-
-        {/* PRODUCTS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((item, index) => (
             <div
               key={index}
               className="group relative h-64 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition"
             >
-              {/* IMAGE */}
               <Image
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-contain group-hover:scale-105 transition duration-500"
               />
-
-              {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-
-              {/* TITLE OVER IMAGE */}
               <div className="absolute bottom-0 w-full p-6">
                 <h4 className="text-lg font-semibold text-white uppercase">
                   {item.title}

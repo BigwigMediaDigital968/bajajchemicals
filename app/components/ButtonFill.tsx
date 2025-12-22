@@ -23,8 +23,6 @@ const ButtonFill: React.FC<ButtonFillProps> = ({
   aosDelay,
 }) => {
   const btnClass = `click-btn btn-style5 ${className}`;
-
-  // ✅ LINK BUTTON
   if (href) {
     return (
       <Link
@@ -37,8 +35,6 @@ const ButtonFill: React.FC<ButtonFillProps> = ({
       </Link>
     );
   }
-
-  // ✅ NORMAL BUTTON
   return (
     <button
       type={type}

@@ -72,24 +72,19 @@ const Contact = () => {
     <div className="relative">
       <Navbar />
 
-      {/* HERO SECTION */}
       <section className="relative h-[70vh] lg:h-[80vh] w-full overflow-hidden">
-        {/* Background Image */}
         <Image
-          src={contactbg} // 🔁 replace with your image path
+          src={contactbg}
           alt="Contact Background"
           fill
           priority
           className="object-cover"
         />
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/60" />
 
-        {/* Content */}
         <div className="absolute bottom-12 left-0 right-0 z-10">
           <div className="w-11/12 md:w-5/6 mx-auto text-left text-white">
-            {/* Big Heading */}
             <h1
               className="text-4xl md:text-6xl font-bold tracking-wide mb-4"
               data-aos="fade-up"
@@ -97,7 +92,6 @@ const Contact = () => {
               Contact Us
             </h1>
 
-            {/* Breadcrumb */}
             <div
               className="flex items-center gap-3 text-sm md:text-base"
               data-aos="fade-up"
@@ -110,10 +104,8 @@ const Contact = () => {
                 Home
               </a>
 
-              {/* Circle */}
               <span className="w-2 h-2 rounded-full bg-[var(--primary)]"></span>
 
-              {/* Current Page */}
               <span className="text-[var(--primary)] font-semibold">
                 Contact us
               </span>
@@ -122,13 +114,11 @@ const Contact = () => {
         </div>
       </section>
       <section className="relative py-24 bg-white overflow-hidden">
-        {/* Background Illustration */}
         <div className="absolute bottom-0 left-0 opacity-100 pointer-events-none">
           <Image src={formbg} alt="Background" width={800} height={800} />
         </div>
 
         <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-2 gap-16 items-start relative z-10">
-          {/* LEFT CONTENT */}
           <div className="space-y-8">
             <div>
               <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-gray-500 mb-3">
@@ -146,44 +136,38 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* CONTACT INFO */}
             <div className="space-y-16">
-              {/* Phone */}
               <div className="flex gap-4 items-start w-fit">
                 <a
                   href="tel:+1809120670"
                   className="flex gap-4 items-start group cursor-pointer"
                 >
-                  {/* ICON BOX */}
                   <div
                     className="
-        relative w-14 h-14 rounded-xl
-        bg-[var(--primary)]
-        flex items-center justify-center
-        text-white
-        overflow-hidden
-      "
+                      relative w-14 h-14 rounded-xl
+                      bg-[var(--primary)]
+                      flex items-center justify-center
+                      text-white
+                      overflow-hidden
+                    "
                   >
-                    {/* Black hover spread */}
                     <span
                       className="
-          absolute inset-0
-          bg-black
-          scale-0
-          transition-transform duration-500 ease-out
-          group-hover:scale-100
-          rounded-xl
-        "
+                        absolute inset-0
+                        bg-black
+                        scale-0
+                        transition-transform duration-500 ease-out
+                        group-hover:scale-100
+                        rounded-xl
+                      "
                     />
 
-                    {/* Icon */}
                     <Phone
                       size={22}
                       className="relative z-10 transition-transform duration-300 group-hover:scale-110"
                     />
                   </div>
 
-                  {/* TEXT */}
                   <div>
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       Contact
@@ -198,31 +182,29 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* Email */}
               <div className="flex gap-4 items-start w-fit">
                 <a
                   href="mailto:info@domainname.com"
                   className="flex gap-4 items-start group cursor-pointer"
                 >
-                  {/* ICON BOX */}
                   <div
                     className="
-        relative w-14 h-14 rounded-xl
-        bg-[var(--primary)]
-        flex items-center justify-center
-        text-white
-        overflow-hidden
-      "
+                        relative w-14 h-14 rounded-xl
+                        bg-[var(--primary)]
+                        flex items-center justify-center
+                        text-white
+                        overflow-hidden
+                      "
                   >
                     <span
                       className="
-          absolute inset-0
-          bg-black
-          scale-0
-          transition-transform duration-500 ease-out
-          group-hover:scale-100
-          rounded-xl
-        "
+                        absolute inset-0
+                        bg-black
+                        scale-0
+                        transition-transform duration-500 ease-out
+                        group-hover:scale-100
+                        rounded-xl
+                      "
                     />
 
                     <Mail
@@ -231,7 +213,6 @@ const Contact = () => {
                     />
                   </div>
 
-                  {/* TEXT */}
                   <div>
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       E-mail
@@ -246,7 +227,6 @@ const Contact = () => {
                 </a>
               </div>
 
-              {/* Address */}
               <div className="flex gap-4 items-start w-fit">
                 <a
                   href="https://maps.app.goo.gl/aGS6QNr8gUUD75nc9"
@@ -296,7 +276,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT FORM */}
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
             <h3 className="text-3xl md:text-4xl font-light mb-8">
               Contact <span className="font-semibold">me</span>
@@ -348,13 +327,6 @@ const Contact = () => {
                 rows={5}
                 className="w-full border rounded-xl px-5 py-4 outline-none resize-none"
               />
-
-              {/* <button
-                type="submit"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-orange-500 text-orange-500 font-semibold hover:bg-[var(--primary)] hover:text-white transition"
-              >
-                
-              </button> */}
               <ButtonFill
                 text="Submit Message"
                 type="submit"
@@ -365,7 +337,6 @@ const Contact = () => {
         </div>
       </section>
       <section className="relative w-full h-[420px] md:h-[520px]">
-        {/* GOOGLE MAP */}
         <iframe
           title="Google Map Location"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d223772.76676769473!2d76.798549!3d28.7956764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d014d6aaaaaab%3A0xe896fb0b9a534504!2sBajaj%20Chemicals!5e0!3m2!1sen!2sin!4v1766399789901!5m2!1sen!2sin"
@@ -373,8 +344,6 @@ const Contact = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         />
-
-        {/* OVERLAY CARD */}
         <div
           className="
           absolute bottom-6 left-1/2 -translate-x-1/2

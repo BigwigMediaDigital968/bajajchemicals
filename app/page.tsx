@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Testimonial from "./components/Testimonial";
 import ButtonFill from "./components/ButtonFill";
 import ProductsSection from "./components/Products";
-import LatestBlogSection from "./components/Blogs";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,9 +25,7 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      {/* HERO SECTION */}
       <section className="relative h-[70vh] lg:h-screen">
-        {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src={hero}
@@ -36,11 +33,10 @@ export default function HomePage() {
             className="w-full h-full object-cover"
             priority
           />
-          {/* Overlay */}
+
           <div className="absolute inset-0 bg-black/60" />
         </div>
 
-        {/* CONTENT */}
         <div className="relative z-10 h-full flex items-center">
           <div className="w-11/12 md:w-5/6 mx-auto text-white">
             <p
@@ -82,7 +78,6 @@ export default function HomePage() {
       <ProductsSection />
 
       <Testimonial />
-      {/* <LatestBlogSection /> */}
       <Footer />
     </>
   );

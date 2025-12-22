@@ -22,14 +22,7 @@ export default function ChemicalProductGrid({
           className="
                 group relative rounded-2xl p-[1px] bg-gradient-to-br from-[#f97316]/30 via-orange-400/30 to-amber-400/30 hover:from-[#f97316] hover:to-[#f97316] transition-all duration-300"
         >
-          {/* CARD */}
           <div className="relative h-full rounded-2xl bg-white backdrop-blur-xl p-6 shadow-md hover:shadow-2xl transition-all duration-300">
-            {/* QUANTITY BADGE */}
-            {/* <span className="absolute top-4 right-4 rounded-full bg-blue-600 text-white text-xs px-3 py-1 font-semibold tracking-wide">
-              {product.quantity}
-            </span> */}
-
-            {/* IMAGE */}
             <div className="flex justify-center mb-6">
               <div className="w-32 h-32 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                 <Image
@@ -41,19 +34,12 @@ export default function ChemicalProductGrid({
                 />
               </div>
             </div>
-
-            {/* CONTENT */}
             <div className="text-center">
               <h3 className="text-lg font-bold text-gray-800 mb-1 tracking-wide">
                 {product.name}
               </h3>
 
               <p className="text-sm text-gray-500 mb-4">{product.company}</p>
-
-              {/* ACTION */}
-              {/* <button className="mt-auto inline-flex items-center justify-center rounded-full border border-blue-500 px-5 py-2 text-sm font-semibold text-blue-600 hover:bg-blue-600 hover:text-white transition-all duration-300">
-                View Details
-              </button> */}
               <span
                 className="
                         mt-auto inline-flex items-center justify-center

@@ -20,7 +20,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* NAVBAR */}
       <header
         className={`fixed top-0 left-0 w-full border-b border-gray-600 z-50 transition-all duration-300 ${
           scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"
@@ -90,7 +89,6 @@ export default function Navbar() {
             />
           </div>
 
-          {/* MOBILE TOGGLE */}
           <button
             onClick={() => setOpen(!open)}
             className="lg:hidden text-white z-[60]"
@@ -100,7 +98,6 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* FULLSCREEN MOBILE MENU */}
       <div
         className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg transition-all duration-500 ${
           open ? "opacity-100 visible" : "opacity-0 invisible"
@@ -112,7 +109,6 @@ export default function Navbar() {
             { name: "About", link: "/about-us" },
             { name: "Chemicals", link: "/chemicals" },
             { name: "Detergents", link: "/detergents" },
-            // { name: "Blogs", link: "/blogs" },
             { name: "Contact", link: "/contact" },
           ].map((item, i) => (
             <Link

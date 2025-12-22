@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Factory, ShieldCheck, Settings, Package } from "lucide-react";
 
-import industryImg from "../assets/whatwedo.png"; // replace with your image
+import industryImg from "../assets/whatwedo.png";
 
 const services = [
   {
@@ -32,21 +32,15 @@ export default function WhatWeDoSection() {
   return (
     <section className="bg-[#181818] text-white">
       <div className="grid lg:grid-cols-2 lg:min-h-[90vh]">
-        {/* LEFT CONTENT */}
         <div className="w-11/12 md:w-5/6 mx-auto py-20 flex flex-col justify-center">
-          {/* LABEL */}
           <div className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-4">
             <span className="w-2 h-2 rounded-full bg-[var(--primary)]" />
             What We Do
           </div>
-
-          {/* TITLE */}
           <h2 className="text-4xl md:text-5xl font-light leading-tight mb-12">
             Innovative factory and industry <br />
             <span className="font-bold">solutions today</span>
           </h2>
-
-          {/* SERVICES GRID */}
           <div className="grid sm:grid-cols-2 gap-6 max-w-xl">
             {services.map((item, i) => {
               const Icon = item.icon;
@@ -68,8 +62,6 @@ export default function WhatWeDoSection() {
             })}
           </div>
         </div>
-
-        {/* RIGHT IMAGE */}
         <div className="relative hidden lg:block glass-hover">
           <Image
             src={industryImg}

@@ -18,8 +18,6 @@ export default function ProductsGrid({ products }: { products: Product[] }) {
             alt={item.title}
             className="w-full h-64 object-cover group-hover:scale-105 transition duration-500"
           />
-
-          {/* TITLE OVER IMAGE */}
           <div className="absolute inset-0 bg-black/40 flex items-end p-5">
             <h4 className="text-white text-lg font-semibold">{item.title}</h4>
           </div>

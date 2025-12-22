@@ -19,8 +19,6 @@
   animation: fadeInUp 0.5s ease forwards;
 }
 
-/* Initial hidden state */
-/* Curtain overlay */
 .curtain-wrapper {
   position: relative;
   overflow: hidden;
@@ -29,13 +27,12 @@
 .curtain-overlay {
   position: absolute;
   inset: 0;
-  background: #ffffff; /* same as section bg */
+  background: #ffffff;
   transform-origin: right;
   transform: scaleX(1);
   z-index: 20;
 }
 
-/* Animate curtain */
 .curtain-animate {
   animation: curtainOpen 1.4s ease-out forwards;
 }

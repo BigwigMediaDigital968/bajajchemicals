@@ -71,7 +71,6 @@ export default function Testimonial() {
 
   return (
     <section ref={ref} className="relative py-12 text-white overflow-hidden">
-      {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <Image
           src={testimonialbg}
@@ -84,7 +83,6 @@ export default function Testimonial() {
 
       <div className="relative w-11/12 md:w-5/6 mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* LEFT IMAGE */}
           <div
             className="overflow-hidden rounded-3xl glass-hover curtain-wrapper 
                 max-w-[400px] aspect-[2/3] mx-auto"
@@ -101,10 +99,7 @@ export default function Testimonial() {
               }`}
             />
           </div>
-
-          {/* RIGHT CONTENT */}
           <div>
-            {/* FIXED TITLE (NO ANIMATION) */}
             <div className="mb-8">
               <div
                 data-aos="fade-up"
@@ -124,8 +119,6 @@ export default function Testimonial() {
                 <span className="font-bold">are saying</span>
               </h2>
             </div>
-
-            {/* SLIDING CONTENT */}
             <div className="relative overflow-hidden min-h-[260px]">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -135,22 +128,15 @@ export default function Testimonial() {
                   exit={{ x: direction > 0 ? -80 : 80, opacity: 0 }}
                   transition={{ duration: 0.45, ease: "easeOut" }}
                 >
-                  {/* Stars */}
                   <div className="flex gap-1 text-orange-400 text-lg mb-4">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
                       <span key={i}>★</span>
                     ))}
                   </div>
-
-                  {/* Review */}
                   <p className="text-gray-700 leading-relaxed max-w-xl mb-8">
                     “{testimonial.review}”
                   </p>
-
-                  {/* CLIENT ROW */}
-                  {/* CLIENT ROW */}
                   <div className="flex items-center justify-between max-w-xl">
-                    {/* LEFT: Avatar + Name */}
                     <div className="flex items-center gap-4">
                       <Image
                         src={testimonial.avatar}
@@ -169,8 +155,6 @@ export default function Testimonial() {
                         </p>
                       </div>
                     </div>
-
-                    {/* RIGHT: Navigation Buttons */}
                     <div className="flex gap-4">
                       <button
                         onClick={() => paginate(-1)}
@@ -190,12 +174,9 @@ export default function Testimonial() {
                 </motion.div>
               </AnimatePresence>
             </div>
-
-            {/* NAVIGATION */}
           </div>
         </div>
       </div>
-      {/* <ClientsSection /> */}
     </section>
   );
 }

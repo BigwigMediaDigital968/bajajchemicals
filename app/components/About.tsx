@@ -38,7 +38,6 @@ export default function AboutSection() {
   return (
     <section ref={ref} className="pt-12 bg-white relative overflow-hidden">
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        {/* LEFT – IMAGES */}
         <div className="relative w-full max-w-lg mx-auto">
           <div className="w-64 rounded-3xl shadow-lg glass-hover curtain-wrapper">
             <Image
@@ -71,10 +70,7 @@ export default function AboutSection() {
             />
           </div>
         </div>
-
-        {/* RIGHT – CONTENT */}
         <div>
-          {/* ABOUT LABEL */}
           <div
             data-aos="fade-up"
             className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
@@ -82,8 +78,6 @@ export default function AboutSection() {
             <span className="w-2 h-2 rounded-full bg-orange-400" />
             <p className="font-semibold">About Us</p>
           </div>
-
-          {/* TITLE */}
           <h2
             data-aos="zoom-in"
             className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
@@ -91,8 +85,6 @@ export default function AboutSection() {
             Four Decades of Commitment <br />
             <span className="font-bold">to Quality Chemicals</span>
           </h2>
-
-          {/* DESCRIPTION */}
           <p
             data-aos="fade-up"
             data-aos-delay="100"
@@ -102,10 +94,7 @@ export default function AboutSection() {
             supplying detergent and soap raw materials into a trusted name in
             chemical manufacturing through quality and innovation.
           </p>
-
-          {/* BULLETS + RATING */}
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
-            {/* BULLETS */}
             <ul
               data-aos="fade-up"
               data-aos-delay="200"
@@ -123,8 +112,6 @@ export default function AboutSection() {
                 </li>
               ))}
             </ul>
-
-            {/* RATING CARD */}
             <div
               data-aos="flip-up"
               data-aos-delay="300"
@@ -137,8 +124,6 @@ export default function AboutSection() {
               <p className="text-sm text-gray-600">15.5K Genuine Rating</p>
             </div>
           </div>
-
-          {/* BUTTON */}
           <div data-aos="fade-up" data-aos-delay="400" className="mt-10">
             <ButtonFill text="Learn More →" href="/" className="w-[170px]" />
           </div>
