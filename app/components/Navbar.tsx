@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import ButtonFill from "./ButtonFill";
 
 export default function Navbar() {
@@ -28,7 +28,7 @@ export default function Navbar() {
       >
         <nav className="w-11/12 mx-auto flex items-center justify-between text-white py-2 lg:py-0">
           <Link href="/" className="text-2xl font-bold flex items-center gap-2">
-            <Image src={logo} alt="Bajaj Chemicals" width={72} height={72} />
+            <Image src={logo} alt="Bajaj Chemicals" width={172} height={172} />
           </Link>
 
           <ul className="hidden lg:flex items-center gap-16 font-medium">

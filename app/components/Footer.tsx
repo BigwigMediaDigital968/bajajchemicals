@@ -8,7 +8,7 @@ import {
   FaPinterestP,
 } from "react-icons/fa";
 import Image from "next/image";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 import footerbg from "../assets/footer.svg";
 const socialLinks = [
   {
@@ -53,7 +53,12 @@ export default function Footer() {
           {/* BRAND */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <Image src={logo} alt="Bajaj Chemicals" width={64} height={64} />
+              <Image
+                src={logo}
+                alt="Bajaj Chemicals"
+                width={220}
+                height={220}
+              />
             </div>
 
             <p className="text-gray-400 mb-6 max-w-xs leading-relaxed">
