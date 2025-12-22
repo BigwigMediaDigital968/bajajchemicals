@@ -56,13 +56,13 @@ export default function Navbar() {
                 <div className="absolute top-20 left-0 bg-black/90 w-48 shadow-xl overflow-hidden">
                   <Link
                     href="/chemicals"
-                    className="block px-5 py-3 hover:bg-orange-500/10"
+                    className="block px-5 py-3 hover:bg-orange-500/10 hover:text-[var(--primary)]"
                   >
                     Chemicals
                   </Link>
                   <Link
                     href="/detergents"
-                    className="block px-5 py-3 hover:bg-orange-500/10"
+                    className="block px-5 py-3 hover:bg-orange-500/10 hover:text-[var(--primary)]"
                   >
                     Detergents
                   </Link>
