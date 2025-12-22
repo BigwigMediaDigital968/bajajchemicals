@@ -4,7 +4,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import testimonialImg from "../assets/testimonial.png";
+import testimonialImg from "../assets/testimonial.jpeg";
 import testimonialbg from "../assets/testimonial-bg.png";
 import ClientsSection from "./Clients";
 
@@ -85,7 +85,10 @@ export default function Testimonial() {
       <div className="relative w-11/12 md:w-5/6 mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           {/* LEFT IMAGE */}
-          <div className="overflow-hidden rounded-3xl glass-hover curtain-wrapper">
+          <div
+            className="overflow-hidden rounded-3xl glass-hover curtain-wrapper 
+                max-w-[400px] aspect-[2/3] mx-auto"
+          >
             <Image
               src={testimonialImg}
               alt="Client experience"
