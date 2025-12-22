@@ -17,20 +17,24 @@ type Tab = "mission" | "vision" | "value";
 
 const faqs = [
   {
-    q: "Lorem ipsum dolor sit amet consectetur?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    q: "What products does Bajaj Chemicals manufacture?",
+    a: "Bajaj Chemicals specializes in the manufacturing of industrial chemicals and detergent raw materials, along with high-quality detergent products under the Montu Detergents brand.",
   },
   {
-    q: "Adipiscing elit sed do eiusmod tempor?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    q: "Do you supply chemicals for detergent and soap manufacturing?",
+    a: "Yes, we supply reliable chemical inputs used in detergent and soap manufacturing, ensuring consistent quality and performance for industrial applications.",
   },
   {
-    q: "Ut enim ad minim veniam quis nostrud?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    q: "How do you ensure product quality and consistency?",
+    a: "We follow strict quality control measures at every stage of production, from raw material sourcing to final dispatch, backed by decades of industry experience.",
   },
   {
-    q: "Excepteur sint occaecat cupidatat non proident?",
-    a: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    q: "Do you cater to both industrial and bulk orders?",
+    a: "Yes, we cater to bulk and industrial requirements, offering dependable supply, standardized formulations, and timely delivery for business clients.",
+  },
+  {
+    q: "How can I contact Bajaj Chemicals for business enquiries?",
+    a: "You can reach us through the contact form on our website, by phone, or via email. Our team will respond promptly to discuss your requirements.",
   },
 ];
 
@@ -146,8 +150,8 @@ export default function AboutPage() {
                   data-aos="zoom-in"
                   className="text-4xl md:text-5xl font-light text-gray-200 leading-tight mb-6"
                 >
-                  Lorem, ipsum dolor. <br />
-                  <span className="font-bold">Lorem, ipsum.</span>
+                  Driven by Quality, <br />
+                  <span className="font-bold">Built on Trust</span>
                 </h2>
               </div>
 
@@ -156,9 +160,10 @@ export default function AboutPage() {
                 data-aos-delay="200"
                 className="text-gray-200 max-w-lg"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-                iusto asperiores dignissimos. Quasi obcaecati illo qui fugit
-                dolor odio expedita.
+                Our approach combines decades of industry experience with strict
+                quality standards and customer-focused solutions. From raw
+                material sourcing to final product delivery, we ensure
+                reliability, consistency, and performance at every stage.
               </p>
             </div>
           </div>
