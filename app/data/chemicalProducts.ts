@@ -49,8 +49,8 @@ export const chemicalProducts = [
       "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766215215/caustic-soda-500x500_qqy9i6.webp",
   },
   {
-    name: "Citric Acid Mono",
-    company: "—",
+    name: "Citric Acid ",
+    company: "Mono",
     quantity: "25KG",
     image:
       "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766215216/citric-acid-mono-1632986748-6017232_bdk3yd.jpg",
