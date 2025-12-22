@@ -36,7 +36,10 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <section ref={ref} className="pt-12 bg-white relative overflow-hidden">
+    <section
+      ref={ref}
+      className="pt-12 py-12 bg-white relative overflow-hidden"
+    >
       <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div className="relative w-full max-w-lg mx-auto">
           <div className="w-64 rounded-3xl shadow-lg glass-hover curtain-wrapper">

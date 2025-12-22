@@ -35,7 +35,7 @@ export const detergentProducts = [
   {
     productName: "Montu Phenyl",
     image:
-      "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766231447/PHENYLE_fbynv8.webp",
+      "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766406088/Untitled_design_29_c9flqz.png",
     variants: [{ quantity: "1 LTR", salePrice: 50, mrp: 150 }],
   },
 ];

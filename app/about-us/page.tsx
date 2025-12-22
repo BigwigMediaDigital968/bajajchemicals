@@ -133,22 +133,20 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-black/60" />
 
           {/* TEXT ON IMAGE */}
-          <div className="relative z-10 h-full flex items-center">
-            <div className="w-11/12 md:w-5/6 mx-auto grid lg:grid-cols-2 gap-12 text-white">
+          <div className="relative z-10 py-16 md:py-24">
+            <div className="w-11/12 md:w-5/6 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 text-white">
               <div>
                 <div
                   data-aos="fade-up"
                   className="flex items-center gap-2 text-sm tracking-widest uppercase text-[var(--primary)] mb-3"
                 >
                   <span className="w-2 h-2 rounded-full bg-orange-400" />
-                  <p className="text-sm uppercase tracking-widest font-semibold ">
-                    Our Approach
-                  </p>
+                  <p className="font-semibold">Our Approach</p>
                 </div>
 
                 <h2
                   data-aos="zoom-in"
-                  className="text-4xl md:text-5xl font-light text-gray-200 leading-tight mb-6"
+                  className="text-4xl md:text-5xl font-light text-gray-200 leading-tight mb-4"
                 >
                   Driven by Quality, <br />
                   <span className="font-bold">Built on Trust</span>
@@ -158,7 +156,7 @@ export default function AboutPage() {
               <p
                 data-aos="fade-up"
                 data-aos-delay="200"
-                className="text-gray-200 max-w-lg"
+                className="text-gray-200 max-w-lg mt-4 lg:mt-0 text-base md:text-lg"
               >
                 Our approach combines decades of industry experience with strict
                 quality standards and customer-focused solutions. From raw
@@ -176,7 +174,7 @@ export default function AboutPage() {
             className="w-11/12 md:w-5/6 mx-auto bg-white rounded-[36px] shadow-2xl overflow-hidden"
           >
             {/* TABS */}
-            <div data-aos="fade-down" className="grid grid-cols-3 border-b">
+            <div data-aos="fade-down" className="grid grid-cols-3 border-b ">
               <TabButton
                 active={active === "mission"}
                 onClick={() => setActive("mission")}
@@ -423,7 +421,7 @@ function TabButton({
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center gap-3 py-6 text-sm font-semibold transition ${
+      className={`flex items-center justify-center gap-3 py-6 text-xs font-semibold transition ${
         active
           ? "bg-[var(--primary)] text-white"
           : "bg-white text-gray-700 hover:bg-gray-100"

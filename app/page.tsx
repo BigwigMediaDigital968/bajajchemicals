@@ -25,7 +25,7 @@ export default function HomePage() {
     <>
       <Navbar />
 
-      <section className="relative h-[70vh] lg:h-screen">
+      <section className="relative h-[90vh] pt-16 lg:h-screen">
         <div className="absolute inset-0">
           <Image
             src={hero}
