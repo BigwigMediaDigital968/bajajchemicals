@@ -40,8 +40,8 @@ export default function Footer() {
             Ready to work with us?
           </h2>
           <p className="text-gray-400 max-w-2xl">
-            Let’s build reliable chemical and detergent solutions
-            together—driven by quality, experience, and trust.
+            Let’s build reliable chemical and detergent solutions together
+            driven by quality, experience, and trust.
           </p>
         </div>
 

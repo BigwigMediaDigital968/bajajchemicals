@@ -199,16 +199,17 @@ export default function AboutPage() {
                 {active === "mission" && (
                   <div key={active} data-aos="fade-right">
                     <p className="text-gray-600 mb-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestiae quisquam impedit beatae vel consectetur eius,
-                      suscipit veniam nihil.
+                      Our mission is to deliver high-quality chemical products
+                      and detergent solutions that empower our customers and
+                      consumers with superior cleaning performance.
                     </p>
                     <ul className="space-y-4">
                       {[
-                        "Sustainable Manufacturing Practices",
-                        "Advanced Technology Integration",
-                        "Community & Environmental Responsibility",
-                        "Innovation-Driven Growth",
+                        "Maintaining strict quality standards across all products",
+                        "Investing in modern manufacturing and process improvement",
+                        "Leveraging decades of industry experience and technical know-how",
+                        "Building long-term, trust-based relationships with customers",
+                        "Operating responsibly with a focus on safety and sustainability",
                       ].map((item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">
@@ -224,16 +225,19 @@ export default function AboutPage() {
                 {active === "vision" && (
                   <div key={active} data-aos="fade-right">
                     <p className="text-gray-600 mb-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestiae quisquam impedit beatae vel consectetur eius,
-                      suscipit veniam nihil.
+                      To be a trusted and preferred chemical manufacturing
+                      partner, recognized for consistent quality, technical
+                      excellence, and ethical business practices, while
+                      continuously evolving to meet the changing needs of the
+                      detergent and soap industry.
                     </p>
                     <ul className="space-y-4">
                       {[
-                        "Sustainable Manufacturing Practices",
-                        "Advanced Technology Integration",
-                        "Community & Environmental Responsibility",
-                        "Innovation-Driven Growth",
+                        "To be a trusted and preferred partner in chemical and detergent manufacturing.",
+                        "To consistently deliver high-quality products backed by technical expertise.",
+                        "To grow responsibly through innovation and operational excellence.",
+                        "To strengthen our presence in both industrial and consumer markets.",
+                        "To adapt continuously to changing industry and customer requirements.",
                       ].map((item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">
@@ -249,16 +253,18 @@ export default function AboutPage() {
                 {active === "value" && (
                   <div key={active} data-aos="fade-right">
                     <p className="text-gray-600 mb-6">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Molestiae quisquam impedit beatae vel consectetur eius,
-                      suscipit veniam nihil.
+                      At Bajaj Chemical, our values are the foundation of
+                      everything we do. They guide our decisions, shape our
+                      culture, and define the way we serve our customers and
+                      partners.
                     </p>
                     <ul className="space-y-4">
                       {[
-                        "Sustainable Manufacturing Practices",
-                        "Advanced Technology Integration",
-                        "Community & Environmental Responsibility",
-                        "Innovation-Driven Growth",
+                        "Uncompromising focus on quality across sourcing, manufacturing, and delivery.",
+                        "Ethical, transparent, and honest business practices in every interaction.",
+                        "Strong commitment to understanding customer needs and delivering reliable solutions.",
+                        "Application of over 45 years of industry experience to improve products and processes.",
+                        "Responsible and safe manufacturing with care for people and the environment.",
                       ].map((item, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-black text-sm">

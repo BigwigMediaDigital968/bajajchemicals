@@ -9,7 +9,65 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import formbg from "../assets/footer.svg";
 import Footer from "../components/Footer";
 import ButtonFill from "../components/ButtonFill";
+import emailjs from "emailjs-com";
+
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.phone ||
+      !formData.message
+    ) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    emailjs
+      .send(
+        "service_6rvw01b",
+        "template_jk25ymk",
+        {
+          name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        "LCtQz5NyJc0y0wKpF"
+      )
+      .then(() => {
+        alert("Message sent successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        alert("Failed to send message. Please try again.");
+      });
+  };
+
   return (
     <div className="relative">
       <Navbar />
@@ -244,36 +302,51 @@ const Contact = () => {
               Contact <span className="font-semibold">me</span>
             </h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <input
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Enter first name"
-                  className="w-full border rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+                  className="w-full border rounded-xl px-5 py-4 outline-none"
                 />
                 <input
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Enter last name"
-                  className="w-full border rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+                  className="w-full border rounded-xl px-5 py-4 outline-none"
                 />
               </div>
 
               <input
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 type="email"
                 placeholder="Enter your e-mail"
-                className="w-full border rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+                className="w-full border rounded-xl px-5 py-4 outline-none"
               />
 
               <input
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 type="tel"
                 placeholder="Enter your phone no."
-                className="w-full border rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+                className="w-full border rounded-xl px-5 py-4 outline-none"
               />
 
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Write Message"
                 rows={5}
-                className="w-full border rounded-xl px-5 py-4 outline-none focus:border-orange-500 resize-none"
+                className="w-full border rounded-xl px-5 py-4 outline-none resize-none"
               />
 
               {/* <button
