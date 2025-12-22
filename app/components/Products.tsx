@@ -3,25 +3,30 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import chem1 from "../assets/hero.png";
-import chem2 from "../assets/hero.png";
-import chem3 from "../assets/hero.png";
+import chem1 from "../assets/AOS LIQUID.png";
+import chem2 from "../assets/Specialty Chemicals.png";
+import chem3 from "../assets/bulk.png";
 
-import det1 from "../assets/hero.png";
-import det2 from "../assets/hero.png";
-import det3 from "../assets/hero.png";
+import det1 from "../assets/detergent.jpeg";
+import det2 from "../assets/dishwash.jpeg";
+import det3 from "../assets/powder.svg";
+import { motion, AnimatePresence } from "framer-motion";
 
 const chemicalProducts = [
   { title: "Industrial Solvents", image: chem1 },
   { title: "Specialty Chemicals", image: chem2 },
-  { title: "Water Treatment Chemicals", image: chem3 },
+  { title: "Bulk Chemical Raw Materials", image: chem3 },
 ];
 
 const detergentProducts = [
-  { title: "Laundry Detergents", image: det1 },
-  { title: "Industrial Cleaners", image: det2 },
-  { title: "Surface Care Solutions", image: det3 },
+  { title: "Incanto Wash", image: det1 },
+  { title: "Dishwash Liquid", image: det2 },
+  { title: "Detergent Powder", image: det3 },
 ];
+const sectionTitles = {
+  chemicals: "Advanced Chemical Solutions for Industrial Excellence",
+  detergents: "High-Performance Detergent Solutions for Every Need",
+};
 
 export default function ProductsSection() {
   const [activeTab, setActiveTab] = useState<"chemicals" | "detergents">(
@@ -46,12 +51,18 @@ export default function ProductsSection() {
         </div>
 
         {/* TITLE */}
-        <h2
-          data-aos="zoom-in"
-          className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
-        >
-          Lorem ipsum dolor sit amet consectetur.
-        </h2>
+        <AnimatePresence mode="wait">
+          <motion.h2
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="text-4xl md:text-5xl font-light text-gray-900 leading-tight mb-6"
+          >
+            {sectionTitles[activeTab]}
+          </motion.h2>
+        </AnimatePresence>
 
         {/* TABS */}
         <div className="flex  gap-4 mb-10">
@@ -89,7 +100,7 @@ export default function ProductsSection() {
               <Image
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                className="w-full h-full object-contain group-hover:scale-105 transition duration-500"
               />
 
               {/* OVERLAY */}
@@ -97,7 +108,7 @@ export default function ProductsSection() {
 
               {/* TITLE OVER IMAGE */}
               <div className="absolute bottom-0 w-full p-6">
-                <h4 className="text-lg font-semibold text-white">
+                <h4 className="text-lg font-semibold text-white uppercase">
                   {item.title}
                 </h4>
               </div>

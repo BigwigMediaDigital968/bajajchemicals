@@ -10,7 +10,16 @@ import {
 import Image from "next/image";
 import logo from "../assets/logo.png";
 import footerbg from "../assets/footer.svg";
-
+const socialLinks = [
+  {
+    icon: FaFacebookF,
+    url: "https://www.facebook.com/bajajchemicals.bawana/",
+  },
+  {
+    icon: FaInstagram,
+    url: "https://www.instagram.com/montudetergents/?igsh=MWh1Y3kwajhxajQzbQ%3D%3D#",
+  },
+];
 export default function Footer() {
   return (
     <footer className="relative text-white overflow-hidden">
@@ -52,16 +61,17 @@ export default function Footer() {
             </p>
 
             <div className="flex gap-4">
-              {[FaPinterestP, FaTwitter, FaFacebookF, FaInstagram].map(
-                (Icon, i) => (
-                  <span
-                    key={i}
-                    className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-black transition cursor-pointer"
-                  >
-                    <Icon size={14} />
-                  </span>
-                )
-              )}
+              {socialLinks.map(({ icon: Icon, url }, i) => (
+                <a
+                  key={i}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full border border-white/20 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-black transition cursor-pointer"
+                >
+                  <Icon size={14} />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -77,11 +87,6 @@ export default function Footer() {
               <li>
                 <Link href="/about-us" className="hover:text-[var(--primary)]">
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:text-[var(--primary)]">
-                  Blog
                 </Link>
               </li>
               <li>
@@ -115,11 +120,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/help" className="hover:text-[var(--primary)]">
-                  Help
-                </Link>
-              </li>
-              <li>
                 <Link href="/contact" className="hover:text-[var(--primary)]">
                   Contact Us
                 </Link>
@@ -131,11 +131,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400 leading-relaxed">
-              <li>+91 123654789</li>
-              <li>info@domainname.com</li>
               <li>
-                520, West Valley, Amin <br />
-                and minim
+                <a href="tel:9810333152">9810333152</a>
+              </li>
+              <li>
+                <a href="mailto:Bajajchemicals@hotmail.com">
+                  Bajajchemicals@hotmail.com
+                </a>
+              </li>
+              <li>
+                C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi, 110039
               </li>
             </ul>
           </div>

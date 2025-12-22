@@ -27,13 +27,11 @@ export default function Navbar() {
         }`}
       >
         <nav className="w-11/12 mx-auto flex items-center justify-between text-white py-2 lg:py-0">
-          {/* LOGO */}
           <Link href="/" className="text-2xl font-bold flex items-center gap-2">
             <Image src={logo} alt="Bajaj Chemicals" width={72} height={72} />
           </Link>
 
-          {/* DESKTOP MENU */}
-          <ul className="hidden lg:flex items-center gap-10 font-medium">
+          <ul className="hidden lg:flex items-center gap-16 font-medium">
             <li>
               <Link href="/" className="hover:text-[var(--primary)]">
                 Home
@@ -45,7 +43,6 @@ export default function Navbar() {
               </Link>
             </li>
 
-            {/* PRODUCTS */}
             <li
               className="relative"
               onMouseEnter={() => setProductOpen(true)}
@@ -74,22 +71,16 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="/blog" className="hover:text-[var(--primary)]">
-                Blogs
-              </Link>
-            </li>
-            <li>
               <Link href="/contact" className="hover:text-[var(--primary)]">
                 Contact
               </Link>
             </li>
           </ul>
 
-          {/* DESKTOP RIGHT */}
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex items-center gap-2 text-sm">
               <Phone size={16} className="text-[var(--primary)]" />
-              <span>+01 123456789</span>
+              <a href="tel:9810333152">9810333152</a>
             </div>
 
             <ButtonFill
@@ -121,7 +112,7 @@ export default function Navbar() {
             { name: "About", link: "/about-us" },
             { name: "Chemicals", link: "/chemicals" },
             { name: "Detergents", link: "/detergents" },
-            { name: "Blogs", link: "/blogs" },
+            // { name: "Blogs", link: "/blogs" },
             { name: "Contact", link: "/contact" },
           ].map((item, i) => (
             <Link

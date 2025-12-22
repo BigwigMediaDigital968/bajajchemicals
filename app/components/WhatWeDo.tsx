@@ -7,23 +7,23 @@ import industryImg from "../assets/whatwedo.png"; // replace with your image
 
 const services = [
   {
-    title: "Automation Solutions",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+    title: "Experience You Can Trust",
+    desc: "Over 45 years in chemical manufacturing.",
     icon: Factory,
   },
   {
-    title: "Quality Control",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut enim ad minim veniam.",
+    title: "Quality Assurance",
+    desc: " Strict quality checks at every stage.",
     icon: ShieldCheck,
   },
   {
-    title: "Process Engineering",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, quis nostrud exercitation ullamco.",
+    title: "Industry Expertise",
+    desc: "Deep understanding of detergent formulations.",
     icon: Settings,
   },
   {
-    title: "Product Development",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, duis aute irure dolor in reprehenderit.",
+    title: "Customer Focused",
+    desc: "Long-term partnerships, not just sales.",
     icon: Package,
   },
 ];

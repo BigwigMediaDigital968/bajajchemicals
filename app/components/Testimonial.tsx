@@ -4,34 +4,42 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import testimonialImg from "../assets/testimonial-image.jpg";
+import testimonialImg from "../assets/testimonial.png";
 import testimonialbg from "../assets/testimonial-bg.png";
 import ClientsSection from "./Clients";
 
 const testimonials = [
   {
     review:
-      "The team’s attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!",
-    name: "Brooklyn Simmons",
-    role: "Homeowner",
+      "The quality and consistency of their chemical raw materials are excellent. Their products integrate seamlessly into our detergent manufacturing process and help us maintain reliable performance batch after batch.",
+    name: "Amit Sharma",
+    role: "Production Manager",
     avatar: "https://cdn-icons-png.flaticon.com/128/2202/2202112.png",
     rating: 5,
   },
   {
     review:
-      "Professional, reliable, and highly skilled. The entire process was smooth, and the results were outstanding. I would definitely work with them again.",
-    name: "Esther Howard",
+      "A trusted supplier for specialty chemicals and detergent ingredients. Timely delivery, transparent communication, and dependable quality make them a long-term partner for our business.",
+    name: "Priya Mehta",
     role: "Business Owner",
     avatar: "https://cdn-icons-png.flaticon.com/128/6997/6997662.png",
     rating: 5,
   },
   {
     review:
-      "Excellent service and great communication throughout the project. The quality of work speaks for itself.",
-    name: "Jacob Jones",
+      "Their chemical inputs have improved the overall consistency of our detergent formulations. The team is responsive and technically sound, which adds great value to our operations.",
+    name: "Rohit Verma",
     role: "Operations Manager",
     avatar: "https://cdn-icons-png.flaticon.com/128/16683/16683419.png",
     rating: 4,
+  },
+  {
+    review:
+      "We have been sourcing chemical raw materials from them for years, and the quality has always been consistent. Their products meet our formulation requirements perfectly and help us deliver reliable detergent performance.",
+    name: "Suresh Patel",
+    role: "Procurement Head",
+    avatar: "https://cdn-icons-png.flaticon.com/128/2922/2922510.png",
+    rating: 5,
   },
 ];
 

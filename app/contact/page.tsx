@@ -130,9 +130,12 @@ const Contact = () => {
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       Contact
                     </p>
-                    <p className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
-                      +1 809 120 670
-                    </p>
+                    <a
+                      href="tel:9810333152"
+                      className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700"
+                    >
+                      9810333152
+                    </a>
                   </div>
                 </a>
               </div>
@@ -175,9 +178,12 @@ const Contact = () => {
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
                       E-mail
                     </p>
-                    <p className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
-                      info@domainname.com
-                    </p>
+                    <a
+                      href="mailto:Bajajchemicals@hotmail.com"
+                      className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700"
+                    >
+                      Bajajchemicals@hotmail.com
+                    </a>
                   </div>
                 </a>
               </div>
@@ -185,7 +191,7 @@ const Contact = () => {
               {/* Address */}
               <div className="flex gap-4 items-start w-fit">
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=37+San+Juan+Lane+Graaf+Florisstraat+22A+3021+CH"
+                  href="https://maps.app.goo.gl/aGS6QNr8gUUD75nc9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex gap-4 items-start group cursor-pointer"
@@ -223,7 +229,8 @@ const Contact = () => {
                       Our Address
                     </p>
                     <p className="text-gray-500 max-w-sm transition-colors duration-300 group-hover:text-gray-700">
-                      37 San Juan Lane Graaf Florisstraat 22A, 3021 CH
+                      C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi,
+                      110039
                     </p>
                   </div>
                 </a>
@@ -317,7 +324,7 @@ const Contact = () => {
                 Our Location
               </h3>
               <p className="text-sm text-[var(--med-text)]/70">
-                Lorem Ipsum Clinic, Sector 00, New Delhi, India
+                C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi, 110039
               </p>
             </div>
           </div>

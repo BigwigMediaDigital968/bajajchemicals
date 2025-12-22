@@ -47,7 +47,7 @@ export default function HomePage() {
               data-aos="fade-up"
               className="uppercase tracking-widest text-sm text-[var(--primary)] mb-4"
             >
-              Lorem ipsum dolor sit amet.
+              A trust hand to 1.5 Millions+ Families
             </p>
 
             <h1
@@ -55,7 +55,7 @@ export default function HomePage() {
               data-aos-delay="100"
               className="text-4xl md:text-6xl font-bold leading-tight mb-6"
             >
-              Lorem ipsum dolor, sit <br /> amet consectetur adipisicing.
+              Bajaj Chemical – Powering <br /> Cleanliness for Over 45 Years
             </h1>
 
             <p
@@ -63,15 +63,14 @@ export default function HomePage() {
               data-aos-delay="200"
               className="max-w-xl text-gray-200 mb-8"
             >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste
-              perspiciatis ipsum, eos atque tenetur tempora illum inventore
-              fugit pariatur. Recusandae nulla consequatur necessitatibus quam
-              incidunt!
+              Trusted manufacturer of LABSA and high-quality detergent products,
+              serving industries and households with consistent performance,
+              purity, and reliability since four decades.
             </p>
             <div data-aos="zoom-in" data-aos-delay="300">
               <ButtonFill
                 text="Explore Products"
-                href="/products"
+                href="/chemicals"
                 className="w-[170px]"
               />
             </div>
@@ -83,7 +82,7 @@ export default function HomePage() {
       <ProductsSection />
 
       <Testimonial />
-      <LatestBlogSection />
+      {/* <LatestBlogSection /> */}
       <Footer />
     </>
   );

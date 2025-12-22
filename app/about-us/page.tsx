@@ -9,7 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Eye, Target, Gem } from "lucide-react";
-import bg from "../assets/mission-image.jpg";
+import bg from "../assets/about.png";
 import bg1 from "../assets/hero.png";
 import faqimg from "../assets/whatwedo.png";
 import WhatWeDoSection from "../components/WhatWeDo";
