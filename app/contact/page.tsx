@@ -368,7 +368,7 @@ const Contact = () => {
         {/* GOOGLE MAP */}
         <iframe
           title="Google Map Location"
-          src="https://www.google.com/maps?q=New+Delhi,+India&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d223772.76676769473!2d76.798549!3d28.7956764!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d014d6aaaaaab%3A0xe896fb0b9a534504!2sBajaj%20Chemicals!5e0!3m2!1sen!2sin!4v1766399789901!5m2!1sen!2sin"
           className="absolute inset-0 w-full h-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
