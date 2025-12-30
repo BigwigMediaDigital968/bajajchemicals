@@ -129,9 +129,41 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10">
-          <p className="text-center text-gray-500 py-6 text-sm">
-            © 2026 Bajaj Chemicals. All Rights Reserved.
-          </p>
+          <div
+            className="
+      w-11/12 md:w-5/6 mx-auto
+      py-6
+      flex flex-col md:flex-row
+      items-center
+      justify-between
+      gap-3
+      text-sm
+      text-gray-500
+    "
+          >
+            {/* LEFT */}
+            <p className="text-center md:text-left">
+              © 2026 Bajaj Chemicals. All Rights Reserved.
+            </p>
+
+            {/* RIGHT */}
+            <p className="text-center md:text-right">
+              Designed & Developed by{" "}
+              <a
+                href="https://bigwigmediadigital.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+          font-semibold
+          text-white
+          hover:text-[#f97316]
+          transition
+        "
+              >
+                Bigwig Media Digital
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

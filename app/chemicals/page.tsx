@@ -157,7 +157,7 @@ export default function ChemicalPage() {
         "
                 />
               </div>
-              <div className="max-h-[320px] overflow-y-auto space-y-3">
+              <div className="max-h-[260px] overflow-y-auto space-y-3">
                 {chemicalProducts.map((product) => (
                   <label
                     key={product.name}
@@ -179,7 +179,61 @@ export default function ChemicalPage() {
                 ))}
               </div>
             </div>
+
+            {/* CONTACT CARD */}
+            <div className="mt-6 bg-white rounded-xl border p-4 shadow-md">
+              <h4 className="text-sm font-semibold text-gray-800 mb-3">
+                Contact us
+              </h4>
+
+              <p className="text-xs text-gray-500 mb-4">
+                Talk to our team for product details, pricing, or bulk
+                inquiries.
+              </p>
+
+              {/* PHONE */}
+              <a
+                href="tel:+919810333152"
+                className="
+      flex items-center gap-3
+      w-full
+      mb-3
+      px-4 py-3
+      rounded-lg
+      border
+      text-sm font-medium
+      text-gray-800
+      hover:bg-gray-50
+      transition
+    "
+              >
+                📞
+                <span>+91 98103 33152</span>
+              </a>
+
+              {/* WHATSAPP */}
+              <a
+                href="https://wa.me/+919810038988"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+      flex items-center gap-3
+      w-full
+      px-4 py-3
+      rounded-lg
+      bg-green-500
+      text-sm font-semibold
+      text-white
+      hover:bg-green-600
+      transition
+    "
+              >
+                💬
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
           </aside>
+
           <div ref={gridRef} className="flex-1">
             <ChemicalProductGrid products={filteredProducts} />
           </div>
