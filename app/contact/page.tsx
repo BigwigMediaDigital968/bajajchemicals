@@ -176,9 +176,11 @@ const Contact = () => {
                       href="tel:9810333152"
                       className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700"
                     >
-                      9810333152
+                      9810333152 |{" "}
                     </a>
-                    <p>123</p>
+                    <span className="text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                      9810038988
+                    </span>
                   </div>
                 </a>
               </div>
