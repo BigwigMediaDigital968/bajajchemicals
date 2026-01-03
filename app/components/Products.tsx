@@ -30,7 +30,7 @@ const sectionTitles = {
 
 export default function ProductsSection() {
   const [activeTab, setActiveTab] = useState<"chemicals" | "detergents">(
-    "chemicals"
+    "detergents"
   );
 
   const products =
@@ -62,17 +62,6 @@ export default function ProductsSection() {
         </AnimatePresence>
         <div className="flex  gap-4 mb-10">
           <button
-            onClick={() => setActiveTab("chemicals")}
-            className={`px-8 py-3 rounded-full font-semibold transition ${
-              activeTab === "chemicals"
-                ? "bg-[var(--primary)] text-black"
-                : "border border-gray-300 text-gray-700 hover:border-[var(--primary)]"
-            }`}
-          >
-            Chemicals
-          </button>
-
-          <button
             onClick={() => setActiveTab("detergents")}
             className={`px-8 py-3 rounded-full font-semibold transition ${
               activeTab === "detergents"
@@ -81,6 +70,16 @@ export default function ProductsSection() {
             }`}
           >
             Detergents
+          </button>
+          <button
+            onClick={() => setActiveTab("chemicals")}
+            className={`px-8 py-3 rounded-full font-semibold transition ${
+              activeTab === "chemicals"
+                ? "bg-[var(--primary)] text-black"
+                : "border border-gray-300 text-gray-700 hover:border-[var(--primary)]"
+            }`}
+          >
+            Chemicals
           </button>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
