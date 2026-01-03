@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import imgSmall from "../assets/about logo.png";
-import imgLarge from "../assets/ChatGPT Image Dec 22, 2025, 01_03_28 PM.png";
+import imgLarge from "../assets/abc.png";
 import { useEffect, useRef, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";

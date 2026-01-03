@@ -151,7 +151,7 @@ export const chemicalProducts = [
     company: "T-1 KALALI/BADSHAH",
     quantity: "50KG",
     image:
-      "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766215220/product-jpeg_lncylu.jpg",
+      "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766215218/pine-oil-500x500_ycg2jp.webp",
   },
   {
     name: "SODIUM SULPHIDE",
