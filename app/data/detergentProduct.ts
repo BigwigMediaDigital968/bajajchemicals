@@ -38,4 +38,10 @@ export const detergentProducts = [
       "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766406088/Untitled_design_29_c9flqz.png",
     variants: [{ quantity: "1 LTR", salePrice: 50, mrp: 150 }],
   },
+  {
+    productName: "Montu Detergent Cake",
+    image:
+      "https://res.cloudinary.com/dqrlkbsdq/image/upload/v1767440377/WhatsApp_Image_2025-12-22_at_17.41.19_-_Edited_bzbkku.jpg",
+    variants: [{ quantity: "180 GM", salePrice: 10 }],
+  },
 ];

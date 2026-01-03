@@ -5,7 +5,7 @@ import Image from "next/image";
 interface Variant {
   quantity: string;
   salePrice: number;
-  mrp: number;
+  mrp?: number;
 }
 
 interface Product {
@@ -46,7 +46,11 @@ export default function DetergentProductGrid({
               >
                 <div>
                   <p className="font-semibold">{v.quantity}</p>
-                  <p className="text-sm text-gray-500 line-through">₹{v.mrp}</p>
+                  {v.mrp && (
+                    <p className="text-sm text-gray-500 line-through">
+                      ₹{v.mrp}
+                    </p>
+                  )}
                 </div>
 
                 <span className="text-lg font-bold text-[#f97316]">
