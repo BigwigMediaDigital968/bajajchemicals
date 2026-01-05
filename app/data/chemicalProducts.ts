@@ -39,7 +39,7 @@ export const chemicalProducts = [
     company: "Shriram",
     quantity: "25KG",
     image:
-      "https://res.cloudinary.com/dcq2oziz4/image/upload/v1766215217/industrial-chemicals_okofwi.jpg",
+      "https://res.cloudinary.com/dqrlkbsdq/image/upload/v1767595686/stable-bleaching-powder-500x500_rppq0y.webp",
   },
   {
     name: "Caustic Soda",
