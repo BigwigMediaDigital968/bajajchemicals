@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "../components/Navbar";
-import hero from "../assets/aboutus.jpg";
+import hero from "../assets/about.png";
 import Image from "next/image";
 import AboutSection from "../components/About";
 import Footer from "../components/Footer";
@@ -73,13 +73,13 @@ export default function AboutPage() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative h-[70vh] lg:h-[80vh]">
+      <section className="relative h-[50vh] md:h-[70vh] lg:h-[100vh]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src={hero}
             alt="Chemical & Detergent Manufacturing"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-fill"
             priority
           />
           {/* Overlay */}

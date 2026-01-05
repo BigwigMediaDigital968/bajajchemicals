@@ -3,7 +3,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import contactbg from "../assets/page-header-bg.jpg";
+import contactbg from "../assets/contact.png";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 import formbg from "../assets/footer.svg";
@@ -72,16 +72,16 @@ const Contact = () => {
     <div className="relative">
       <Navbar />
 
-      <section className="relative h-[70vh] lg:h-[80vh] w-full overflow-hidden">
+      <section className="relative h-[50vh] md:h-[70vh] lg:h-screen w-full overflow-hidden">
         <Image
           src={contactbg}
           alt="Contact Background"
           fill
           priority
-          className="object-cover"
+          className="object-fill"
         />
 
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-black/30" />
 
         <div className="absolute bottom-12 left-0 right-0 z-10">
           <div className="w-11/12 md:w-5/6 mx-auto text-left text-white">
