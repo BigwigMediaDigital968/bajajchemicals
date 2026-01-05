@@ -34,7 +34,7 @@ export default function Footer() {
           </p>
         </div>
         <div className="border-t border-white/10"></div>
-        <div className="w-11/12 md:w-5/6 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="w-11/12 md:w-5/6 mx-auto py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
@@ -89,21 +89,6 @@ export default function Footer() {
                   Detergents
                 </Link>
               </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-lg font-semibold mb-6">Security</h4>
-            <ul className="space-y-4 text-gray-400">
-              <li>
-                <Link href="/terms" className="hover:text-[var(--primary)]">
-                  Term & Condition
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-[var(--primary)]">
-                  Privacy Policy
-                </Link>
-              </li>
               <li>
                 <Link href="/contact" className="hover:text-[var(--primary)]">
                   Contact Us
@@ -111,6 +96,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-gray-400 leading-relaxed">
