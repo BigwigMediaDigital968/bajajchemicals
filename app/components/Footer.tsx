@@ -5,6 +5,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import logo from "../assets/logo2.png";
 import footerbg from "../assets/footer.svg";
+import { Mail, MapPin, Phone } from "lucide-react";
 const socialLinks = [
   {
     icon: FaFacebookF,
@@ -99,17 +100,51 @@ export default function Footer() {
 
           <div>
             <h4 className="text-lg font-semibold mb-6">Contact</h4>
-            <ul className="space-y-4 text-gray-400 leading-relaxed">
-              <li>
-                <a href="tel:9810333152">9810333152</a>
+
+            <ul className="space-y-5 text-gray-400 leading-relaxed">
+              {/* PHONE */}
+              <li className="flex items-start gap-3">
+                <Phone size={18} className="mt-1 text-[var(--primary-color)]" />
+                <a
+                  href="tel:9810333152"
+                  className="hover:text-white transition"
+                >
+                  9810333152
+                </a>
               </li>
-              <li>
-                <a href="mailto:Bajajchemicals@hotmail.com">
+
+              {/* EMAIL */}
+              <li className="flex items-start gap-3">
+                <Mail size={18} className="mt-1 text-[var(--primary-color)]" />
+                <a
+                  href="mailto:Bajajchemicals@hotmail.com"
+                  className="hover:text-white transition break-all"
+                >
                   Bajajchemicals@hotmail.com
                 </a>
               </li>
-              <li>
-                C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi, 110039
+
+              {/* ADDRESS 1 */}
+              <li className="flex items-start gap-3">
+                <MapPin
+                  size={18}
+                  className="mt-1 text-[var(--primary-color)]"
+                />
+                <span>
+                  C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi – 110039
+                </span>
+              </li>
+
+              {/* ADDRESS 2 */}
+              <li className="flex items-start gap-3">
+                <MapPin
+                  size={18}
+                  className="mt-1 text-[var(--primary-color)]"
+                />
+                <span>
+                  H-54, RIICO Indl. Area, Kapasan Dist, Chittorgarh, Rajsthan -
+                  312202
+                </span>
               </li>
             </ul>
           </div>

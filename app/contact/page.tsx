@@ -230,6 +230,7 @@ const Contact = () => {
                 </a>
               </div>
 
+              {/* HEAD OFFICE */}
               <div className="flex gap-4 items-start w-fit">
                 <a
                   href="https://maps.app.goo.gl/aGS6QNr8gUUD75nc9"
@@ -267,14 +268,62 @@ const Contact = () => {
                   {/* TEXT */}
                   <div>
                     <p className="font-semibold transition-colors duration-300 group-hover:text-black">
-                      Our Address
+                      Head Office
                     </p>
                     <p className="text-gray-500 max-w-sm transition-colors duration-300 group-hover:text-gray-700">
-                      C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi,
+                      C-275, Sector 5, DSIDC Bawana Industrial Area, Delhi –
                       110039
                     </p>
                   </div>
                 </a>
+              </div>
+
+              {/* BRANCH OFFICE */}
+              <div className="flex gap-4 items-start w-fit">
+                {/* <a
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-4 items-start group cursor-pointer"
+                > */}
+                {/* ICON BOX */}
+                <div
+                  className="
+        relative w-14 h-14 rounded-xl
+        bg-[var(--primary)]
+        flex items-center justify-center
+        text-white
+        overflow-hidden
+      "
+                >
+                  <span
+                    className="
+          absolute inset-0
+          bg-black
+          scale-0
+          transition-transform duration-500 ease-out
+          group-hover:scale-100
+          rounded-xl
+        "
+                  />
+
+                  <MapPin
+                    size={22}
+                    className="relative z-10 transition-transform duration-300 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* TEXT */}
+                <div>
+                  <p className="font-semibold transition-colors duration-300 group-hover:text-black">
+                    Branch Office
+                  </p>
+                  <p className="text-gray-500 max-w-sm transition-colors duration-300 group-hover:text-gray-700">
+                    H-54, RIICO Industrial Area, Kapasan District, Chittorgarh,
+                    Rajasthan – 312202
+                  </p>
+                </div>
+                {/* </a> */}
               </div>
             </div>
           </div>
